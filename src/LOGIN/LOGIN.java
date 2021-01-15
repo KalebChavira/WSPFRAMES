@@ -117,8 +117,8 @@ public class LOGIN extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLoginActionPerformed
-                String x="K";                                                     //Se declara una variable String para validar la contrasena
-            if (x.equals(txtpassword.getText().toString())) {
+                String x="K";                                                   //Se declara una variable String para validar la contrasena
+            if (x.equals(txtpassword.getText().toString())) {                   //Sentencia que determina si la variable "x" es igual al cuadro de contrasena que esta ubicado en el frame
                   MENU ir = new MENU();                                         //Se crea un nuevo objeto de la clase menu
                   ir.setVisible(true);                                          //Con el objeto se hace visible la clase que contiene el Frame de menu
                   this.dispose();                                               //Cerrar esta clase
@@ -128,7 +128,7 @@ public class LOGIN extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonLoginActionPerformed
 
     private void BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarActionPerformed
-this.dispose();        //Cerrar esta clase
+            this.dispose();                         //Cerrar esta clase
     }//GEN-LAST:event_BotonCancelarActionPerformed
 
    
