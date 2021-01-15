@@ -22,7 +22,8 @@ public FRAMES(){                                                                
         this.setLocationRelativeTo(null);                                       //Centrar el Frame
         DefaultTableModel tabla = new DefaultTableModel();                      //Codigo que crea el modelo de la tabla
         cargarTitulosColumas();                                                 //Metodo iniciado para cargar titulos de las tablas en cada columna correspondiente
-        cargarDatos();                                                          //Metodo que contiene un query SELECT para descargar todos los datos en la tabla de muestreo
+        cargarDatos();  
+        VerTabla2();//Metodo que contiene un query SELECT para descargar todos los datos en la tabla de muestreo
     }
     
 Connection conexion;                                                            //Objeto llamado conexion el cual conectara la base de datos
@@ -75,6 +76,10 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         BotonSegundaTabla = new javax.swing.JButton();
+        total = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -167,6 +172,12 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
             }
         });
 
+        jLabel8.setText("Rango de Horario:");
+
+        jLabel9.setText("Retardo:");
+
+        jLabel10.setText("Conteo Diario:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -205,18 +216,34 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(botonirmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26))
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
                                 .addComponent(BotonCaptura, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(botondescarga, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(BotonSegundaTabla)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(botondescarga, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel9)
+                                                .addGap(18, 18, 18))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel10)
+                                                .addGap(48, 48, 48)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(BotonSegundaTabla)
+                                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap())
             .addComponent(jSeparator1)
             .addGroup(layout.createSequentialGroup()
@@ -275,12 +302,20 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
                         .addGap(34, 34, 34)
                         .addComponent(BotonSegundaTabla)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(total, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(21, 21, 21)
                         .addComponent(relojfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(relojhora, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -395,14 +430,46 @@ this.dispose();                         //Cerrar este frame
     }//GEN-LAST:event_botonirmenuActionPerformed
 
     private void BotonSegundaTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSegundaTablaActionPerformed
-        tabla2.addColumn("ID REGISTRO");                //Titulo 1 de la Tabla
+      
+      DatosTabla2();
+    }//GEN-LAST:event_BotonSegundaTablaActionPerformed
+
+    private void VerTabla2(){
+          tabla2.addColumn("ID REGISTRO");                //Titulo 1 de la Tabla
         tabla2.addColumn("NUMERO DE SERIE");            //Titulo 1 de la Tabla
         tabla2.addColumn("DESCRIPCION");                //Titulo 1 de la Tabla
         tabla2.addColumn("CANTIDAD BULTOS");            //Titulo 1 de la Tabla
         tabla2.addColumn("CANTIDAD TOTAL");             //Titulo 1 de la Tabla
         this.tablabase2.setModel(tabla2);               //Funcion que la tabla se acomoda en el modelo del frame
-    }//GEN-LAST:event_BotonSegundaTablaActionPerformed
+    }
+    
+    private void DatosTabla2(){
+         String data2[] = new String[5];                                                                                  //Variable que almacena los datos de la consulta
+         String fecha = relojfecha.getFecha().toString();
+         System.out.println(""+ fecha);
+        String SQL2 = "SELECT ID, NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL FROM Captura WHERE FECHA= '"+fecha+"';";                  //Consulta sql de buscar datos
+        try {
+            ResultSet resultado = sentencia.executeQuery(SQL2);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
 
+            while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
+                data2[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
+                data2[1] = resultado.getString("NUMERODEPARTE");           //Variable del arreglo que recibira todos los numeros de parte
+                data2[2] = resultado.getString("DESCRIPCION");             //Variable del arreglo que recibira todas las descriopciones
+                data2[3] = resultado.getString("CANTIDADBULTOS");          //Variable del arreglo que recibira todas las cantidades de bultos
+                data2[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
+                int  conteo = Integer.parseInt(data2[4]);
+                int conteototal =+ conteo;
+                total.setText(""+conteototal);
+            }
+                
+                tabla2.addRow(data2);                                         //Funcion que agrafar todos los valores del arreglo data a la tabla
+              
+        } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
+            JOptionPane.showMessageDialog(null, "Error al cargar los Datos\n");                 //Mensaje al usuario de verificacion de error
+            System.out.println(ex+"");                                                          //Imprimir la excepcion
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -453,12 +520,15 @@ this.dispose();                         //Cerrar este frame
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
@@ -467,6 +537,7 @@ this.dispose();                         //Cerrar este frame
     private rojeru_san.RSLabelHora relojhora;
     private javax.swing.JTable tablabase;
     private javax.swing.JTable tablabase2;
+    private javax.swing.JLabel total;
     private javax.swing.JComboBox<String> usuriocombobox;
     // End of variables declaration//GEN-END:variables
 
