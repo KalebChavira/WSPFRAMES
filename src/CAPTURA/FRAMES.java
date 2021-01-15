@@ -1,29 +1,28 @@
 //INICIO DEL CODIGO PARA LA CAPTURA DE FRAMES
 
-package CAPTURA;                           //Paquete de pruebas
+package CAPTURA;                           //Paquete de Captura
 
 
-import MENU.MENU;
-import javax.swing.JOptionPane;         //libreria para pantallas emergentes
-import java.sql.Connection;             //Libreria que hace la conexion a la Base de Datos
-import java.sql.DriverManager;          //Libreria que carga el driver que realiza la conexion a la Base de Datos
-import java.sql.SQLException;           //Libreria que hace las excepciones en los errores de SQL
-import java.sql.Statement;              //Libreria que carga el objeto que contiene los Strings SQL
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.sql.ResultSet;
-import javax.swing.ImageIcon;
-import javax.swing.table.DefaultTableModel;
+import MENU.MENU;                                                               //Importamos la clase de MENU
+import javax.swing.JOptionPane;                                                 //libreria para pantallas emergentes
+import java.sql.Connection;                                                     //Libreria que hace la conexion a la Base de Datos
+import java.sql.DriverManager;                                                  //Libreria que carga el driver que realiza la conexion a la Base de Datos
+import java.sql.SQLException;                                                   //Libreria que hace las excepciones en los errores de SQL
+import java.sql.Statement;                                                      //Libreria que carga el objeto que contiene los Strings SQL
+import java.util.logging.Level;                                                 //Libreria para crear Excepciones en caso de que los Querys no funcionen
+import java.util.logging.Logger;                                                //Libreria para crear Excepciones en caso de que los Querys no funcionen
+import java.sql.ResultSet;                                                      //Libreria que implementa el objeto Resultset para cargar los SQL
+import javax.swing.table.DefaultTableModel;                                     //Libreria que instancia un modelo de tabla
 
-public class FRAMES extends javax.swing.JFrame {    //Inicio de la clase de pruebas para frames
+public class FRAMES extends javax.swing.JFrame {                                //Inicio de la clase de pruebas para frames
     
-public FRAMES(){                               //Constructor de la clase
-        initComponents();                          //Metodo para iniciar los componentes visuales de la interfaz grafica
-        conectarBaseDatos();                       //Metodo que realiza la conexion a la base de datos
-        this.setLocationRelativeTo(null);          //Centrar el Frame
-        DefaultTableModel tabla = new DefaultTableModel();   //Codigo que crea el modelo de la tabla
-        cargarTitulosColumas();
-        cargarDatos();
+public FRAMES(){                                                                //Constructor de la clase
+        initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
+        conectarBaseDatos();                                                    //Metodo que realiza la conexion a la base de datos
+        this.setLocationRelativeTo(null);                                       //Centrar el Frame
+        DefaultTableModel tabla = new DefaultTableModel();                      //Codigo que crea el modelo de la tabla
+        cargarTitulosColumas();                                                 //Metodo iniciado para cargar titulos de las tablas en cada columna correspondiente
+        cargarDatos();                                                          //Metodo que contiene un query SELECT para descargar todos los datos en la tabla de muestreo
     }
     
 Connection conexion;                                                            //Objeto llamado conexion el cual conectara la base de datos
@@ -33,13 +32,13 @@ DefaultTableModel tabla = new DefaultTableModel() {
         public boolean isCellEditable(int Fila, int Colum) {
             return false;
         }
-    };               //Crear tabla default para poder meter datos
+    };               //Crear la primera tabla default para poder meter datos
 DefaultTableModel tabla2 = new DefaultTableModel() {
         @Override
         public boolean isCellEditable(int Fila, int Colum) {
             return false;
         }
-    };              //Crear tabla default para poder meter datos
+    };              //Crear la segunda tabla default para poder meter datos
 
 
 
@@ -302,82 +301,82 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
     public void conectarBaseDatos() {                                                                                   //Inicio del Metodo que conecta la aplicacion con la Base de Datos
         try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");                                                      //Linea que carga el driver
-         //   JOptionPane.showMessageDialog(null, "El driver esta funcionando");                                          //Mensaje al usuario para verificacion
-        } catch (ClassNotFoundException e) {                                                                            
+         //   JOptionPane.showMessageDialog(null, "El driver esta funcionando");                                        //Mensaje al usuario para verificacion
+        } catch (ClassNotFoundException e) {                                                                            //Excepcion en caso de que el query no funcione                                                                     
             JOptionPane.showMessageDialog(null, "Error al cargar Dirver");                                              //Mensaje al usuario para verificacion
         }
         try {
   conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
- // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                    //Mensaje al usuario para verificacion
-        } catch (SQLException e) {
+ // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                  //Mensaje al usuario para verificacion
+        } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
             JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
         }
         try {
             sentencia = conexion.createStatement();                                                                     //Objeto que conecta la Base de Datos
-   //         JOptionPane.showMessageDialog(null, "Conexion Exitosa");                                                    //Mensaje al usuario para verificacion
-        } catch (SQLException e) {
+   //         JOptionPane.showMessageDialog(null, "Conexion Exitosa");                                                  //Mensaje al usuario para verificacion
+        } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
             JOptionPane.showMessageDialog(null, "Error al crear la conexión con la base de datos");                     //Mensaje al usuario para verificacion
         }
     }
     
-    public void cargarDatos() {
-        String data[] = new String[5];    //Variable que almacena los datos de la consulta
-        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL FROM Captura;";  //Consulta sql
+    public void cargarDatos() {                                                                                         //Funcion con la que se carga los datos en la tabla del frame
+        String data[] = new String[5];                                                                                  //Variable que almacena los datos de la consulta
+        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL FROM Captura;";                  //Consulta sql de buscar datos
         try {
-            ResultSet resultado = sentencia.executeQuery(SQL);  //Linea que ejecuta la consulta sql y almacena los datos en resultado
+            ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
 
             while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
-                data[0] = resultado.getString("ID");
-                data[1] = resultado.getString("NUMERODEPARTE");
-                data[2] = resultado.getString("DESCRIPCION");
-                data[3] = resultado.getString("CANTIDADBULTOS");
-                data[4] = resultado.getString("CANTIDADTOTAL");
-                tabla.addRow(data);
+                data[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
+                data[1] = resultado.getString("NUMERODEPARTE");           //Variable del arreglo que recibira todos los numeros de parte
+                data[2] = resultado.getString("DESCRIPCION");             //Variable del arreglo que recibira todas las descriopciones
+                data[3] = resultado.getString("CANTIDADBULTOS");          //Variable del arreglo que recibira todas las cantidades de bultos
+                data[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
+                tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al cargar los Datos\n");
-            System.out.println(ex+"");
+        } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
+            JOptionPane.showMessageDialog(null, "Error al cargar los Datos\n");                 //Mensaje al usuario de verificacion de error
+            System.out.println(ex+"");                                                          //Imprimir la excepcion
         }
     }
     
-    public void cargarTitulosColumas(){
-        tabla.addColumn("ID REGISTRO");
-        tabla.addColumn("NUMERO DE SERIE");
-        tabla.addColumn("DESCRIPCION");
-        tabla.addColumn("CANTIDAD BULTOS");
-        tabla.addColumn("CANTIDAD TOTAL");
-        this.tablabase.setModel(tabla);
+    public void cargarTitulosColumas(){                     //Metodo para cargar los titulos personalizados a la tabla
+        tabla.addColumn("ID REGISTRO");                     //Titulo 1 de la Tabla
+        tabla.addColumn("NUMERO DE SERIE");                 //Titulo 2 de la Tabla
+        tabla.addColumn("DESCRIPCION");                     //Titulo 3 de la Tabla
+        tabla.addColumn("CANTIDAD BULTOS");                 //Titulo 4 de la Tabla
+        tabla.addColumn("CANTIDAD TOTAL");                  //Titulo 5 de la Tabla
+        this.tablabase.setModel(tabla);                     //Funcion que la tabla se acomoda en el modelo del frame
     } 
     
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
      try {
             sentencia.close();                                                                      //Objeto que cierra la conexion de la Base de Datos
             JOptionPane.showMessageDialog(null,"Base de Datos se esta cerradando");                 //Mensaje al usuario para verificacion
-        } catch (SQLException e) {
+        } catch (SQLException e) {                                                                  //Excepcion en caso de que el query no funcione
             JOptionPane.showMessageDialog(null, "Error al cerrar la base de datos" + e);            //Mensaje al usuario para verificacion
         }
     }//GEN-LAST:event_formWindowClosing
 
     private void BotonCapturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCapturaActionPerformed
-    String hora = this.relojhora.getHora().toString();
-    String fecha = this.relojfecha.getFecha().toString();
-    String clerk = usuriocombobox.getSelectedItem().toString();
-    String noparte = this.nparte.getText();
-    String descripcion = this.descripcion.getText();
-    String cantidadbultos = this.cantidaddebultos.getText();
-    String cantidadtotal = this.cantidadtotal.getText();
+    String hora = this.relojhora.getHora().toString();                          //Asiganacion a una variable String que obtiene el texto de un JText
+    String fecha = this.relojfecha.getFecha().toString();                       //Asiganacion a una variable String que obtiene el texto de un JText
+    String clerk = usuriocombobox.getSelectedItem().toString();                 //Asiganacion a una variable String que obtiene el texto de un JText
+    String noparte = this.nparte.getText();                                     //Asiganacion a una variable String que obtiene el texto de un JText
+    String descripcion = this.descripcion.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadbultos = this.cantidaddebultos.getText();                    //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadtotal = this.cantidadtotal.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
     
-    
+    //Instruccion sql dentro de una variable String llamada SQL
     String SQL ="insert into Captura(HORA,FECHA,USUARIO,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL) values " + "('" + hora + "','" + fecha + "','" + clerk + "','" + noparte + "','" + descripcion + "','" + cantidadbultos + "','" + cantidadtotal + "')";
     try {
-        sentencia.executeUpdate(SQL);
-        JOptionPane.showMessageDialog(null,"CAPTURADO");
-    } catch (SQLException ex) {
-        JOptionPane.showMessageDialog(null,"NO CAPTURADO");
-        Logger.getLogger(FRAMES.class.getName()).log(Level.SEVERE, null, ex);
+        sentencia.executeUpdate(SQL);                                                   //Se ejecuta el Query SQL en la base de datos
+        JOptionPane.showMessageDialog(null,"CAPTURADO");                                //Mensaje al usuario
+    } catch (SQLException ex) {                                                         //Excepcion en caso de que el query no funcione
+        JOptionPane.showMessageDialog(null,"NO CAPTURADO");                             //Mensaje al usuario
+        Logger.getLogger(FRAMES.class.getName()).log(Level.SEVERE, null, ex);           //Excepcion en caso de que el query no funcione
     }
-    tabla.setRowCount(0);
-    cargarDatos();
+    tabla.setRowCount(0);                                                               //Funcion para vaciar la tabla del Model
+    cargarDatos();                                                                      //Llamada a la funcion de cargar datos a la tabla 
         
         
             
@@ -385,23 +384,23 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
     }//GEN-LAST:event_BotonCapturaActionPerformed
 
     private void botondescargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondescargaActionPerformed
-        tabla.setRowCount(0);
-        cargarDatos();
+   tabla.setRowCount(0);                                                               //Funcion para vaciar la tabla del Model
+    cargarDatos();                                                                      //Llamada a la funcion de cargar datos a la tabla 
     }//GEN-LAST:event_botondescargaActionPerformed
 
     private void botonirmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonirmenuActionPerformed
-MENU ir = new MENU();
-ir.setVisible(true);// TODO add your handling code here:
-this.dispose();
+MENU ir = new MENU();                   //Creamos un objeto perteneciente a la clase MENU
+ir.setVisible(true);                    //Hacer Visible la clase Menu
+this.dispose();                         //Cerrar este frame
     }//GEN-LAST:event_botonirmenuActionPerformed
 
     private void BotonSegundaTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSegundaTablaActionPerformed
-           tabla2.addColumn("ID REGISTRO");
-        tabla2.addColumn("NUMERO DE SERIE");
-        tabla2.addColumn("DESCRIPCION");
-        tabla2.addColumn("CANTIDAD BULTOS");
-        tabla2.addColumn("CANTIDAD TOTAL");
-        this.tablabase2.setModel(tabla2);
+        tabla2.addColumn("ID REGISTRO");                //Titulo 1 de la Tabla
+        tabla2.addColumn("NUMERO DE SERIE");            //Titulo 1 de la Tabla
+        tabla2.addColumn("DESCRIPCION");                //Titulo 1 de la Tabla
+        tabla2.addColumn("CANTIDAD BULTOS");            //Titulo 1 de la Tabla
+        tabla2.addColumn("CANTIDAD TOTAL");             //Titulo 1 de la Tabla
+        this.tablabase2.setModel(tabla2);               //Funcion que la tabla se acomoda en el modelo del frame
     }//GEN-LAST:event_BotonSegundaTablaActionPerformed
 
     /**
@@ -438,7 +437,9 @@ this.dispose();
             }
         });
     }
-
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonCaptura;
     private javax.swing.JButton BotonSegundaTabla;
@@ -468,4 +469,6 @@ this.dispose();
     private javax.swing.JTable tablabase2;
     private javax.swing.JComboBox<String> usuriocombobox;
     // End of variables declaration//GEN-END:variables
-}
+
+        }
+//Fin del codigo de desarrollo
