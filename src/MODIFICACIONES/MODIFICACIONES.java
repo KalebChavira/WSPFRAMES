@@ -85,7 +85,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
             
     public void cargarDatos() {                                                                                         //Funcion con la que se carga los datos en la tabla del frame
         String data[] = new String[8];                                                                                  //Variable que almacena los datos de la consulta
-        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO FROM Captura;";                  //Consulta sql de buscar datos
+        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO FROM Captura ORDER BY ID;";                  //Consulta sql de buscar datos
         try {
             ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
 
@@ -112,7 +112,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         BMenu = new javax.swing.JButton();
         BCapturar = new javax.swing.JButton();
         BModificar = new javax.swing.JButton();
-        BBuscar = new javax.swing.JButton();
+        Btabla = new javax.swing.JButton();
         BEliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablabase = new javax.swing.JTable();
@@ -134,6 +134,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         relojfecha = new rojeru_san.RSLabelFecha();
         relojhora = new rojeru_san.RSLabelHora();
         usuariocombobox = new javax.swing.JComboBox<>();
+        BBuscar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -155,17 +156,27 @@ public class MODIFICACIONES extends javax.swing.JFrame {
 
         BModificar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         BModificar.setText("MODIFICAR");
-
-        BBuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BBuscar.setText("BUSCAR");
-        BBuscar.addActionListener(new java.awt.event.ActionListener() {
+        BModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BBuscarActionPerformed(evt);
+                BModificarActionPerformed(evt);
+            }
+        });
+
+        Btabla.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Btabla.setText("TABLA");
+        Btabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtablaActionPerformed(evt);
             }
         });
 
         BEliminar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         BEliminar.setText("ELIMINAR");
+        BEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BEliminarActionPerformed(evt);
+            }
+        });
 
         tablabase.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -178,6 +189,11 @@ public class MODIFICACIONES extends javax.swing.JFrame {
 
             }
         ));
+        tablabase.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablabaseMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tablabase);
 
         jLabel1.setText("ID:");
@@ -198,15 +214,25 @@ public class MODIFICACIONES extends javax.swing.JFrame {
 
         usuariocombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Juan Moreno", "Leopoldo Campos", "Jose Batres", "Manuel Hernandez", "Kaleb Chavira" }));
 
+        BBuscar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BBuscar1.setText("BUSCAR");
+        BBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBuscar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(168, 168, 168)
+                        .addComponent(Btabla, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel8)
@@ -228,7 +254,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                             .addComponent(usuariocombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(40, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(BMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -242,27 +268,30 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                                             .addComponent(BCapturar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(BEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(1, 1, 1)
                                 .addComponent(relojhora, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BBuscar, BCapturar, BEliminar, BMenu, BModificar});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BCapturar, BEliminar, BMenu, BModificar, Btabla});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(idtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(numeroserietxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(idtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(numeroserietxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Btabla, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(descripciontxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -286,10 +315,10 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(usuariocombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BCapturar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -304,7 +333,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
             .addComponent(jScrollPane1)
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BBuscar, BCapturar, BEliminar, BMenu, BModificar});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BCapturar, BEliminar, BMenu, BModificar, Btabla});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -315,13 +344,80 @@ ir.setVisible(true);// TODO add your handling code here:
 this.dispose();
     }//GEN-LAST:event_BMenuActionPerformed
 
-    private void BBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscarActionPerformed
+    private void BtablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtablaActionPerformed
+       String data[] = new String[8];                                                                                  //Variable que almacena los datos de la consulta
+       String id = idtxt.getText();
+        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO FROM Captura ORDER BY ID;";                  //Consulta sql de buscar datos
+        try {
+            tabla.setRowCount(0);
+            ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
+
+            while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
+                data[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
+                idtxt.setText("");
+                data[1] = resultado.getString("NUMERODEPARTE");           //Variable del arreglo que recibira todos los numeros de parte
+                numeroserietxt.setText("");
+                data[2] = resultado.getString("DESCRIPCION");             //Variable del arreglo que recibira todas las descriopciones
+                descripciontxt.setText("");
+                data[3] = resultado.getString("CANTIDADBULTOS");          //Variable del arreglo que recibira todas las cantidades de bultos
+                cantidadbultostxt.setText("");
+                data[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
+                cantidadtotaltxt.setText("");
+                data[5] = resultado.getString("HORA");
+                horatxt.setText("");
+                data[6] = resultado.getString("FECHA");
+                fechatxt.setText("");
+                data[7] = resultado.getString("USUARIO");
+                usuariocombobox.setSelectedItem("");
+                tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
+            }
+        } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
+            JOptionPane.showMessageDialog(null, "Error al cargar los Datos\n");                 //Mensaje al usuario de verificacion de error
+            System.out.println(ex+"");                                                          //Imprimir la excepcion
+        }
+
+    }//GEN-LAST:event_BtablaActionPerformed
+
+    private void BCapturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCapturarActionPerformed
+      String noparte = this.numeroserietxt.getText();                              //Asiganacion a una variable String que obtiene el texto de un JText
+    String descripcion = this.descripciontxt.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadbultos = this.cantidadbultostxt.getText();                      //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadtotal = this.cantidadtotaltxt.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String hora = this.horatxt.getText();                                          //Asiganacion a una variable String que obtiene el texto de un JText
+    String fecha = this.fechatxt.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String clerk = usuariocombobox.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
+  
+    
+    //Instruccion sql dentro de una variable String llamada SQL
+    String SQL ="INSERT into Captura(HORA,FECHA,USUARIO,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL) values " + "('" + hora + "','" + fecha + "','" + clerk + "','" + noparte + "','" + descripcion + "','" + cantidadbultos + "','" + cantidadtotal + "')";
+    try {
+        sentencia.executeUpdate(SQL);                                                   //Se ejecuta el Query SQL en la base de datos
+        JOptionPane.showMessageDialog(null,"CAPTURADO");                                //Mensaje al usuario
+    } catch (SQLException ex) {                                                         //Excepcion en caso de que el query no funcione
+        JOptionPane.showMessageDialog(null,"NO CAPTURADO");                             //Mensaje al usuario
+        Logger.getLogger(FRAMES.class.getName()).log(Level.SEVERE, null, ex);           //Excepcion en caso de que el query no funcione
+    }
+    }//GEN-LAST:event_BCapturarActionPerformed
+
+    private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
+    String id = idtxt.getText();
+        try {
+            String SQL ="DELETE * FROM Captura WHERE ID = '"+id+"'";
+            sentencia.executeUpdate(SQL);
+        tabla.setRowCount(0);
+        cargarDatos();
+        } catch (Exception e) {
+        }
+        
+    }//GEN-LAST:event_BEliminarActionPerformed
+
+    private void BBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscar1ActionPerformed
        String data[] = new String[8];                                                                                  //Variable que almacena los datos de la consulta
        String id = idtxt.getText();
         String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO FROM Captura WHERE ID = '"+id+"';";                  //Consulta sql de buscar datos
         try {
             ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
-
+            tabla.setRowCount(0);
             while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
                 data[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
                 idtxt.setText(data[0]);
@@ -338,7 +434,7 @@ this.dispose();
                 data[6] = resultado.getString("FECHA");
                 fechatxt.setText(data[6]);
                 data[7] = resultado.getString("USUARIO");
-                usuariocombobox.setSelectedItem("USUARIO");
+                usuariocombobox.setSelectedItem(data[7]);
                 tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
         } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
@@ -346,28 +442,43 @@ this.dispose();
             System.out.println(ex+"");                                                          //Imprimir la excepcion
         }
 
-    }//GEN-LAST:event_BBuscarActionPerformed
+    }//GEN-LAST:event_BBuscar1ActionPerformed
 
-    private void BCapturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCapturarActionPerformed
-      String noparte = this.numeroserietxt.getText();                                     //Asiganacion a una variable String que obtiene el texto de un JText
+    private void BModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BModificarActionPerformed
+             String noparte = this.numeroserietxt.getText();                              //Asiganacion a una variable String que obtiene el texto de un JText
     String descripcion = this.descripciontxt.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
-    String cantidadbultos = this.cantidadbultostxt.getText();                    //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadbultos = this.cantidadbultostxt.getText();                      //Asiganacion a una variable String que obtiene el texto de un JText
     String cantidadtotal = this.cantidadtotaltxt.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
-    String hora = this.relojhora.getHora().toString();                          //Asiganacion a una variable String que obtiene el texto de un JText
-    String fecha = this.relojfecha.getFecha().toString();                       //Asiganacion a una variable String que obtiene el texto de un JText
-    String clerk = usuariocombobox.getSelectedItem().toString();                 //Asiganacion a una variable String que obtiene el texto de un JText
-  
+    String hora = this.horatxt.getText();                                          //Asiganacion a una variable String que obtiene el texto de un JText
+    String fecha = this.fechatxt.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String clerk = usuariocombobox.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
+    String id = idtxt.getText();
     
-    //Instruccion sql dentro de una variable String llamada SQL
-    String SQL ="insert into Captura(HORA,FECHA,USUARIO,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL) values " + "('" + hora + "','" + fecha + "','" + clerk + "','" + noparte + "','" + descripcion + "','" + cantidadbultos + "','" + cantidadtotal + "')";
-    try {
-        sentencia.executeUpdate(SQL);                                                   //Se ejecuta el Query SQL en la base de datos
-        JOptionPane.showMessageDialog(null,"CAPTURADO");                                //Mensaje al usuario
-    } catch (SQLException ex) {                                                         //Excepcion en caso de que el query no funcione
-        JOptionPane.showMessageDialog(null,"NO CAPTURADO");                             //Mensaje al usuario
-        Logger.getLogger(FRAMES.class.getName()).log(Level.SEVERE, null, ex);           //Excepcion en caso de que el query no funcione
-    }
-    }//GEN-LAST:event_BCapturarActionPerformed
+        try {
+          String SqlUpdate = "UPDATE Captura set NUMERODEPARTE= '"+noparte+"', DESCRIPCION='"+descripcion+"', CANTIDADBULTOS='" + cantidadbultos+"', CANTIDADTOTAL='"+cantidadtotal+"', HORA='"+ hora+"', FECHA='" +fecha+"', USUARIO='"+clerk +"' WHERE ID = '"+id+"';";   
+          sentencia.executeUpdate(SqlUpdate);
+          tabla.setRowCount(0);
+            BtablaActionPerformed(evt);
+            JOptionPane.showMessageDialog(null,"SE HA MODIFICADO EL REGISTRO NO." + id);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"no se modificaron los datos");
+            System.out.println(""+ e);
+        }
+   
+    }//GEN-LAST:event_BModificarActionPerformed
+
+    private void tablabaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablabaseMouseClicked
+      int seleccionar=tablabase.rowAtPoint(evt.getPoint());
+      idtxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,0)));
+      numeroserietxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,1)));
+      descripciontxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,2)));
+      cantidadbultostxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,3)));
+      cantidadtotaltxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,4)));
+      horatxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,5)));
+      fechatxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,6)));
+      usuariocombobox.setSelectedItem(String.valueOf(tablabase.getValueAt(seleccionar,7)));
+      
+    }//GEN-LAST:event_tablabaseMouseClicked
 
     /**
      * @param args the command line arguments
@@ -405,11 +516,12 @@ this.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BBuscar;
+    private javax.swing.JButton BBuscar1;
     private javax.swing.JButton BCapturar;
     private javax.swing.JButton BEliminar;
     private javax.swing.JButton BMenu;
     private javax.swing.JButton BModificar;
+    private javax.swing.JButton Btabla;
     private javax.swing.JTextField cantidadbultostxt;
     private javax.swing.JTextField cantidadtotaltxt;
     private javax.swing.JTextField descripciontxt;

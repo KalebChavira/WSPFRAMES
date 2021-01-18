@@ -15,12 +15,7 @@ import javax.swing.table.DefaultTableModel;                                     
 public class REPORTES extends javax.swing.JFrame {
     
     public REPORTES() {                                                                //Constructor de la clase
-        initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
-        this.setLocationRelativeTo(null);                                       //Centrar el Frame
-        conectarBaseDatos();                                                    //Metodo que realiza la conexion a la base de datos
-        DefaultTableModel tabla = new DefaultTableModel();                      //Codigo que crea el modelo de la tabla
-        cargarTitulosColumas();                                                 //Metodo iniciado para cargar titulos de las tablas en cada columna correspondiente
-        cargarDatos();  
+    initComponents();
     }
 
     
