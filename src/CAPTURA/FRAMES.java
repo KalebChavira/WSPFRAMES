@@ -18,8 +18,8 @@ public class FRAMES extends javax.swing.JFrame {                                
     
 public FRAMES(){                                                                //Constructor de la clase
         initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
-        conectarBaseDatos();                                                    //Metodo que realiza la conexion a la base de datos
         this.setLocationRelativeTo(null);                                       //Centrar el Frame
+        conectarBaseDatos();                                                    //Metodo que realiza la conexion a la base de datos
         DefaultTableModel tabla = new DefaultTableModel();                      //Codigo que crea el modelo de la tabla
         cargarTitulosColumas();                                                 //Metodo iniciado para cargar titulos de las tablas en cada columna correspondiente
         cargarDatos();  
@@ -430,8 +430,7 @@ this.dispose();                         //Cerrar este frame
     }//GEN-LAST:event_botonirmenuActionPerformed
 
     private void BotonSegundaTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSegundaTablaActionPerformed
-      
-      DatosTabla2();
+   DatosTabla2(); // Visualizar las columnas y los datos de la segunda tabla.
     }//GEN-LAST:event_BotonSegundaTablaActionPerformed
 
     private void VerTabla2(){
