@@ -1,30 +1,28 @@
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Inicio del codigo de Login
  */
 package LOGIN;
 
-import CAPTURA.CAPTURAOPERADOR;
-import MENU.MENU;                                       //Importamos las propiedades de la clase FRAMES0 del paquete de CAPTURA
+import CAPTURA.CAPTURAOPERADOR;                                                 //Importamos las propiedades de la clase FRAMES0 del paquete de CAPTURA
+import MENU.MENU;                                                               //Importamos las propiedades de la clase FRAMES0 del paquete de CAPTURA
 import java.sql.Connection;                                                     //Libreria que hace la conexion a la Base de Datos
 import java.sql.DriverManager;                                                  //Libreria que carga el driver que realiza la conexion a la Base de Datos
 import java.sql.SQLException;                                                   //Libreria que hace las excepciones en los errores de SQL
 import java.sql.Statement;                                                      //Libreria que carga el objeto que contiene los Strings SQL
 import java.sql.ResultSet;                                                      //Libreria que implementa el objeto Resultset para cargar los SQL
-import javax.swing.JOptionPane;                         //libreria para pantallas emergentes
+import javax.swing.JOptionPane;                                                 //Libreria para pantallas emergentes
 
 /**
  *
  * @author KCHAVIRA
  */
-public class LOGIN extends javax.swing.JFrame {
+public class LOGIN extends javax.swing.JFrame {                                 //Clase public de entrada al sistema llamada LOGIN
 
-    /**
+    /*
      * Creates new form LOGIN
      */
-    public LOGIN() {
+    public LOGIN() {                                                            //Constructor de la clase Login
         initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
         this.setLocationRelativeTo(null);                                       //Centrar el Frame en medio de la pantalla
     }
@@ -130,8 +128,8 @@ public class LOGIN extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLoginActionPerformed
-                String x="ADMIN";                                                   //Se declara una variable String para validar la contrasena
-                String y="";
+                String x="ADMIN";                                               //Se declara una variable String para validar la contrasena
+                String y="";                                                    //Se declara una variable String para validar la contrasena
             if (x.equals(txtpassword.getText().toString())) {                   //Sentencia que determina si la variable "x" es igual al cuadro de contrasena que esta ubicado en el frame
                   MENU ir = new MENU();                                         //Se crea un nuevo objeto de la clase menu
                   ir.setVisible(true);                                          //Con el objeto se hace visible la clase que contiene el Frame de menu
@@ -147,13 +145,13 @@ public class LOGIN extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonLoginActionPerformed
 
     private void BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarActionPerformed
-            this.dispose();                         //Cerrar esta clase
-            JOptionPane.showMessageDialog(null,"See You Later..."); //Mensaje de despedida del cliente.
-            System.exit(0);                 //Salida del programa
+            this.dispose();                                                     //Cerrar esta clase
+            JOptionPane.showMessageDialog(null,"See You Later...");             //Mensaje de despedida del cliente.
+            System.exit(0);                                                     //Salida del programa
     }//GEN-LAST:event_BotonCancelarActionPerformed
 
    
-    public static void main(String args[]) {
+    public static void main(String args[]) {                                    //Main de la clase
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
