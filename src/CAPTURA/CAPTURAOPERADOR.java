@@ -174,10 +174,14 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
             }
         });
 
+        total.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        total.setText("0.0");
+
         jLabel8.setText("Rango de Horario:");
 
         jLabel9.setText("Retardo:");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Conteo Diario:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -346,8 +350,8 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
             JOptionPane.showMessageDialog(null, "Error al cargar Dirver");                                              //Mensaje al usuario para verificacion
         }
         try {
- // conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
-  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+ conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+  //conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
  // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                  //Mensaje al usuario para verificacion
         } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
             JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
@@ -436,7 +440,8 @@ this.dispose();                         //Cerrar este frame
     }//GEN-LAST:event_botonirmenuActionPerformed
 
     private void BotonSegundaTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSegundaTablaActionPerformed
-   DatosTabla2(); // Visualizar las columnas y los datos de la segunda tabla.
+        DatosTabla2(); // Visualizar las columnas y los datos de la segunda tabla.
+   
     }//GEN-LAST:event_BotonSegundaTablaActionPerformed
 
     private void VerTabla2(){
