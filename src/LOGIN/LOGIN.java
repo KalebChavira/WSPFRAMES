@@ -26,12 +26,12 @@ public class LOGIN extends javax.swing.JFrame {
      */
     public LOGIN() {
         initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
-        this.setLocationRelativeTo(null);                                       //Centrar el Frame
+        this.setLocationRelativeTo(null);                                       //Centrar el Frame en medio de la pantalla
     }
     
     Connection conexion;                    //Objeto llamado conexion el cual conectara la base de datos
     Statement sentencia;                    //Objeto sentencia el cual mandara los strings de SQL a la base de datos
-    
+  /*  
    public void conectarBaseDatos() {   
      try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");                                                      //Linea que carga el driver
@@ -52,7 +52,7 @@ public class LOGIN extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error al crear la conexión con la base de datos");                     //Mensaje al usuario para verificacion
         }
     }
-    
+    */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -131,16 +131,16 @@ public class LOGIN extends javax.swing.JFrame {
 
     private void BotonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLoginActionPerformed
                 String x="ADMIN";                                                   //Se declara una variable String para validar la contrasena
-                String y="OPERADOR";
+                String y="";
             if (x.equals(txtpassword.getText().toString())) {                   //Sentencia que determina si la variable "x" es igual al cuadro de contrasena que esta ubicado en el frame
                   MENU ir = new MENU();                                         //Se crea un nuevo objeto de la clase menu
                   ir.setVisible(true);                                          //Con el objeto se hace visible la clase que contiene el Frame de menu
                   this.dispose();                                               //Cerrar esta clase
             }
-            if (y.equals(txtpassword.getText().toString())){
-                CAPTURAOPERADOR ir = new CAPTURAOPERADOR();
-                ir.setVisible(true);
-                this.dispose();
+            if (y.equals(txtpassword.getText().toString())){                    //Control de usuario a nivel operador, no entra en menu
+                CAPTURAOPERADOR ir = new CAPTURAOPERADOR();                     //Creamos un objeto de la clase CapturaOperador para llamar a la clase
+                ir.setVisible(true);                                            //Usamos el objeto para inicializar la clase
+                this.dispose();                                                 //Cerramoes esta clase
             }
  
       
@@ -148,7 +148,8 @@ public class LOGIN extends javax.swing.JFrame {
 
     private void BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarActionPerformed
             this.dispose();                         //Cerrar esta clase
-            System.exit(0);
+            JOptionPane.showMessageDialog(null,"See You Later..."); //Mensaje de despedida del cliente.
+            System.exit(0);                 //Salida del programa
     }//GEN-LAST:event_BotonCancelarActionPerformed
 
    
