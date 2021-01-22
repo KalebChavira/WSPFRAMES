@@ -110,6 +110,18 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
 
         jLabel5.setText("Cantidad Total:");
 
+        cantidaddebultos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cantidaddebultosKeyTyped(evt);
+            }
+        });
+
+        cantidadtotal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cantidadtotalKeyTyped(evt);
+            }
+        });
+
         tablabase.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -351,10 +363,10 @@ DefaultTableModel tabla2 = new DefaultTableModel() {
         }
         try {
  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
-  //conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
  // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                  //Mensaje al usuario para verificacion
         } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
-            JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
+           // JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
         }
         try {
             sentencia = conexion.createStatement();                                                                     //Objeto que conecta la Base de Datos
@@ -443,6 +455,24 @@ this.dispose();                         //Cerrar este frame
         DatosTabla2(); // Visualizar las columnas y los datos de la segunda tabla.
    
     }//GEN-LAST:event_BotonSegundaTablaActionPerformed
+
+    private void cantidaddebultosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidaddebultosKeyTyped
+        char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_cantidaddebultosKeyTyped
+
+    private void cantidadtotalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadtotalKeyTyped
+        char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_cantidadtotalKeyTyped
 
     private void VerTabla2(){
           tabla2.addColumn("ID REGISTRO");                //Titulo 1 de la Tabla

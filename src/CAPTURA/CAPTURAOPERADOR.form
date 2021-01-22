@@ -281,8 +281,14 @@
     <Component class="javax.swing.JTextField" name="descripcion">
     </Component>
     <Component class="javax.swing.JTextField" name="cantidaddebultos">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cantidaddebultosKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="cantidadtotal">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cantidadtotalKeyTyped"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
 

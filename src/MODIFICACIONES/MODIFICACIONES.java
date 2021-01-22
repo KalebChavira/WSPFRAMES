@@ -58,11 +58,11 @@ public class MODIFICACIONES extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error al cargar Dirver");                                              //Mensaje al usuario para verificacion
         }
         try {
-  //conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
    conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
  // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                  //Mensaje al usuario para verificacion
         } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
-            JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
+         //   JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
         }
         try {
             sentencia = conexion.createStatement();                                                                     //Objeto que conecta la Base de Datos
@@ -197,20 +197,46 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tablabase);
 
+        jLabel1.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel1.setText("ID:");
 
+        idtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                idtxtKeyTyped(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel2.setText("NUMERO S:");
 
+        jLabel3.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel3.setText("DESCRIPCION:");
 
+        jLabel4.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel4.setText("CANTIDAD B:");
 
+        cantidadbultostxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cantidadbultostxtKeyTyped(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel5.setText("CANTIDAD T:");
 
+        cantidadtotaltxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cantidadtotaltxtKeyTyped(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel6.setText("FECHA:");
 
+        jLabel7.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel7.setText("HORA:");
 
+        jLabel8.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
         jLabel8.setText("USUARIO:");
 
         usuariocombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Juan Moreno", "Leopoldo Campos", "Jose Batres", "Manuel Hernandez", "Kaleb Chavira" }));
@@ -253,7 +279,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                             .addComponent(fechatxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                             .addComponent(horatxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                             .addComponent(usuariocombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(40, Short.MAX_VALUE))
+                        .addContainerGap(34, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,7 +355,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(relojhora, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(relojfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(relojfecha, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
                 .addGap(4, 4, 4))
             .addComponent(jScrollPane1)
         );
@@ -388,6 +414,24 @@ this.dispose();
     String fecha = this.fechatxt.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
     String clerk = usuariocombobox.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
   
+    if(numeroserietxt.getText()==""){
+    JOptionPane.showMessageDialog(null,"Numero de serie vacio...");
+    }
+     if(descripciontxt.getText()==""){
+    JOptionPane.showMessageDialog(null,"Descripcion vacia...");
+    }
+      if(cantidadbultostxt.getText()==""){
+    JOptionPane.showMessageDialog(null,"Cantidad de bultos vacia...");
+    }
+       if(cantidadtotaltxt.getText()==""){
+    JOptionPane.showMessageDialog(null,"Cantidad Total Vacia...");
+    }
+        if(horatxt.getText()==""){
+    JOptionPane.showMessageDialog(null,"Hora mal ingresada...");
+    }
+         if(fechatxt.getText()==""){
+    JOptionPane.showMessageDialog(null,"Fecha mal ingresada...");
+    }
     
     //Instruccion sql dentro de una variable String llamada SQL
     String SQL ="INSERT into Captura(HORA,FECHA,USUARIO,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL) values " + "('" + hora + "','" + fecha + "','" + clerk + "','" + noparte + "','" + descripcion + "','" + cantidadbultos + "','" + cantidadtotal + "')";
@@ -480,6 +524,33 @@ this.dispose();
       usuariocombobox.setSelectedItem(String.valueOf(tablabase.getValueAt(seleccionar,7)));
       
     }//GEN-LAST:event_tablabaseMouseClicked
+
+    private void idtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idtxtKeyTyped
+        char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_idtxtKeyTyped
+
+    private void cantidadbultostxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadbultostxtKeyTyped
+        char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_cantidadbultostxtKeyTyped
+
+    private void cantidadtotaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadtotaltxtKeyTyped
+        char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_cantidadtotaltxtKeyTyped
 
     /**
      * @param args the command line arguments
