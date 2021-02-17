@@ -4,7 +4,7 @@ Inicio del codigo de Login
  */
 package LOGIN;
 
-import CAPTURA.CAPTURAOPERADOR;                                                 //Importamos las propiedades de la clase FRAMES0 del paquete de CAPTURA
+import CAPTURA.CapturaOperador;                                                 //Importamos las propiedades de la clase FRAMES0 del paquete de CAPTURA
 import MENU.MENU;                                                               //Importamos las propiedades de la clase FRAMES0 del paquete de CAPTURA
 import java.sql.Connection;                                                     //Libreria que hace la conexion a la Base de Datos
 import java.sql.DriverManager;                                                  //Libreria que carga el driver que realiza la conexion a la Base de Datos
@@ -136,7 +136,7 @@ public class LOGIN extends javax.swing.JFrame {                                 
                   this.dispose();                                               //Cerrar esta clase
             }
             if (y.equals(txtpassword.getText().toString())){                    //Control de usuario a nivel operador, no entra en menu
-                CAPTURAOPERADOR ir = new CAPTURAOPERADOR();                     //Creamos un objeto de la clase CapturaOperador para llamar a la clase
+                CapturaOperador ir = new CapturaOperador();                     //Creamos un objeto de la clase CapturaOperador para llamar a la clase
                 ir.setVisible(true);                                            //Usamos el objeto para inicializar la clase
                 this.dispose();                                                 //Cerramoes esta clase
             }
