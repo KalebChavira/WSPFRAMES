@@ -39,8 +39,8 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="rSLabelHora1" alignment="1" max="32767" attributes="0"/>
-                  <Component id="rSLabelFecha1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="DisplayHora" alignment="1" max="32767" attributes="0"/>
+                  <Component id="DisplayFecha" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -60,9 +60,9 @@
                   <Component id="BotonCancelar" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="26" max="32767" attributes="0"/>
-              <Component id="rSLabelHora1" min="-2" pref="25" max="-2" attributes="0"/>
+              <Component id="DisplayHora" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="rSLabelFecha1" min="-2" pref="25" max="-2" attributes="0"/>
+              <Component id="DisplayFecha" min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -100,9 +100,9 @@
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtpassword">
     </Component>
-    <Component class="rojeru_san.RSLabelFecha" name="rSLabelFecha1">
+    <Component class="rojeru_san.RSLabelFecha" name="DisplayFecha">
     </Component>
-    <Component class="rojeru_san.RSLabelHora" name="rSLabelHora1">
+    <Component class="rojeru_san.RSLabelHora" name="DisplayHora">
     </Component>
   </SubComponents>
 </Form>

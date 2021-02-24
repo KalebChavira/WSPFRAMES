@@ -25,19 +25,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="rSLabelHora1" min="-2" pref="89" max="-2" attributes="0"/>
-                  <Component id="rSLabelFecha1" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="DisplayHora" min="-2" pref="89" max="-2" attributes="0"/>
+                  <Component id="DisplayFecha" min="-2" pref="80" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jButton4" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <Component id="BotonCerrarSesion" linkSize="1" min="-2" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jButton3" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton5" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBusqueda" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonCaptura" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonReportes" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonModificaciones" linkSize="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="213" max="32767" attributes="0"/>
           </Group>
@@ -49,20 +49,20 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="rSLabelFecha1" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="DisplayFecha" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rSLabelHora1" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="DisplayHora" min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jButton3" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotonBusqueda" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotonCaptura" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton2" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotonReportes" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton5" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotonModificaciones" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                      <Component id="jButton4" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotonCerrarSesion" linkSize="2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
@@ -71,7 +71,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="BotonCaptura">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="0"/>
@@ -79,10 +79,10 @@
         <Property name="text" type="java.lang.String" value="CAPTURA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCapturaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="BotonReportes">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="0"/>
@@ -90,7 +90,7 @@
         <Property name="text" type="java.lang.String" value="REPORTES"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="BotonBusqueda">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="0"/>
@@ -98,7 +98,7 @@
         <Property name="text" type="java.lang.String" value="BUSQUEDA"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="BotonCerrarSesion">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="0"/>
@@ -106,10 +106,10 @@
         <Property name="text" type="java.lang.String" value="CERRAR SESION"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCerrarSesionActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="BotonModificaciones">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="0"/>
@@ -117,12 +117,12 @@
         <Property name="text" type="java.lang.String" value="MODIFICACIONES"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonModificacionesActionPerformed"/>
       </Events>
     </Component>
-    <Component class="rojeru_san.RSLabelHora" name="rSLabelHora1">
+    <Component class="rojeru_san.RSLabelHora" name="DisplayHora">
     </Component>
-    <Component class="rojeru_san.RSLabelFecha" name="rSLabelFecha1">
+    <Component class="rojeru_san.RSLabelFecha" name="DisplayFecha">
     </Component>
   </SubComponents>
 </Form>

@@ -25,43 +25,43 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        rSLabelHora1 = new rojeru_san.RSLabelHora();
-        rSLabelFecha1 = new rojeru_san.RSLabelFecha();
+        BotonCaptura = new javax.swing.JButton();
+        BotonReportes = new javax.swing.JButton();
+        BotonBusqueda = new javax.swing.JButton();
+        BotonCerrarSesion = new javax.swing.JButton();
+        BotonModificaciones = new javax.swing.JButton();
+        DisplayHora = new rojeru_san.RSLabelHora();
+        DisplayFecha = new rojeru_san.RSLabelFecha();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setText("CAPTURA");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotonCaptura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BotonCaptura.setText("CAPTURA");
+        BotonCaptura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotonCapturaActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton2.setText("REPORTES");
+        BotonReportes.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BotonReportes.setText("REPORTES");
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton3.setText("BUSQUEDA");
+        BotonBusqueda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BotonBusqueda.setText("BUSQUEDA");
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton4.setText("CERRAR SESION");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BotonCerrarSesion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BotonCerrarSesion.setText("CERRAR SESION");
+        BotonCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BotonCerrarSesionActionPerformed(evt);
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton5.setText("MODIFICACIONES");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        BotonModificaciones.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BotonModificaciones.setText("MODIFICACIONES");
+        BotonModificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BotonModificacionesActionPerformed(evt);
             }
         });
 
@@ -71,21 +71,21 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rSLabelHora1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSLabelFecha1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DisplayHora, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4))
+                .addComponent(BotonCerrarSesion))
             .addGroup(layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton5))
+                    .addComponent(BotonBusqueda)
+                    .addComponent(BotonCaptura)
+                    .addComponent(BotonReportes)
+                    .addComponent(BotonModificaciones))
                 .addContainerGap(213, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4, jButton5});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BotonBusqueda, BotonCaptura, BotonCerrarSesion, BotonModificaciones, BotonReportes});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,44 +93,44 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(rSLabelFecha1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rSLabelHora1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(DisplayHora, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(BotonBusqueda)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)
+                        .addComponent(BotonCaptura)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(BotonReportes)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5)
+                        .addComponent(BotonModificaciones)
                         .addGap(51, 51, 51)
-                        .addComponent(jButton4)))
+                        .addComponent(BotonCerrarSesion)))
                 .addGap(3, 3, 3))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4, jButton5});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BotonBusqueda, BotonCaptura, BotonCerrarSesion, BotonModificaciones, BotonReportes});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotonCapturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCapturaActionPerformed
 FRAMES ir = new FRAMES();                   //Instanciamos un objeto ir de la clase Frames
 ir.setVisible(true);                        //Usamos el objeto para que nos abra la siguiente clase
 this.dispose();                             //Cerramos la clase y sus componenetes
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotonCapturaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BotonCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrarSesionActionPerformed
     LOGIN ir = new LOGIN();                 //Instanciamos un objeto ir de la clase Login
 ir.setVisible(true);                        //Usamos el objeto para que nos abra la siguiente clase
 this.dispose();                             //Cerramos la clase y sus componenetes
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BotonCerrarSesionActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void BotonModificacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonModificacionesActionPerformed
 MODIFICACIONES ir = new MODIFICACIONES();   //Instanciamos un objeto ir de la clase Modificaciones
 ir.setVisible(true);                        //Usamos el objeto para que nos abra la siguiente clase
 this.dispose();                             //Cerramos la clase y sus componenetes
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_BotonModificacionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,13 +168,13 @@ this.dispose();                             //Cerramos la clase y sus componenet
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private rojeru_san.RSLabelFecha rSLabelFecha1;
-    private rojeru_san.RSLabelHora rSLabelHora1;
+    private javax.swing.JButton BotonBusqueda;
+    private javax.swing.JButton BotonCaptura;
+    private javax.swing.JButton BotonCerrarSesion;
+    private javax.swing.JButton BotonModificaciones;
+    private javax.swing.JButton BotonReportes;
+    private rojeru_san.RSLabelFecha DisplayFecha;
+    private rojeru_san.RSLabelHora DisplayHora;
     // End of variables declaration//GEN-END:variables
 }
 /*
