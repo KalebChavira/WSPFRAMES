@@ -31,36 +31,39 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="91" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="BotonCaptura" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="BotonReportes" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="BotonBusqueda" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="BotonCerrarSesion" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="BotonModificaciones" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="BotonCaptura" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="BotonReportes" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="BotonBusqueda" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="BotonCerrarSesion" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="BotonModificaciones" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="LabelTituloMenu" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="BotonBusqueda" linkSize="2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="BotonCaptura" linkSize="2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="BotonReportes" linkSize="2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="BotonModificaciones" linkSize="2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="BotonCerrarSesion" linkSize="2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="LabelTituloMenu" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <Component id="BotonBusqueda" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BotonCaptura" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BotonReportes" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BotonModificaciones" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="BotonCerrarSesion" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="DisplayFecha" min="-2" pref="23" max="-2" attributes="0"/>
@@ -97,6 +100,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="BUSQUEDA"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBusquedaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonCerrarSesion">
       <Properties>
@@ -123,6 +129,14 @@
     <Component class="rojeru_san.RSLabelHora" name="DisplayHora">
     </Component>
     <Component class="rojeru_san.RSLabelFecha" name="DisplayFecha">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTituloMenu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="36" style="2"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MENU"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

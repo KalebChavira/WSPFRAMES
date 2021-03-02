@@ -3,6 +3,7 @@ Inicio del Codigo del Menu
  */
 package Inicio;                                               //Clase perteneciente al Paquete Menu   
 
+import Informacion.Busquedas;
 import Informacion.FRAMES;                                      //Importamos las librerias de obejetos de la clase Frames del paquete de Captura
 import Inicio.LOGIN;                                         //Importamos las librerias de obejetos de la clase Login del paquete de Login
 import Informacion.MODIFICACIONES;                       //Importamos las librerias de obejetos de la clase Modificaciones del paquete de Modificaciones
@@ -32,6 +33,7 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
         BotonModificaciones = new javax.swing.JButton();
         DisplayHora = new rojeru_san.RSLabelHora();
         DisplayFecha = new rojeru_san.RSLabelFecha();
+        LabelTituloMenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,6 +50,11 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
 
         BotonBusqueda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonBusqueda.setText("BUSQUEDA");
+        BotonBusqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBusquedaActionPerformed(evt);
+            }
+        });
 
         BotonCerrarSesion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonCerrarSesion.setText("CERRAR SESION");
@@ -65,6 +72,9 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
             }
         });
 
+        LabelTituloMenu.setFont(new java.awt.Font("Tahoma", 2, 36)); // NOI18N
+        LabelTituloMenu.setText("MENU");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -76,12 +86,17 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(91, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotonCaptura)
-                    .addComponent(BotonReportes)
-                    .addComponent(BotonBusqueda)
-                    .addComponent(BotonCerrarSesion)
-                    .addComponent(BotonModificaciones))
-                .addGap(71, 71, 71))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BotonCaptura)
+                            .addComponent(BotonReportes)
+                            .addComponent(BotonBusqueda)
+                            .addComponent(BotonCerrarSesion)
+                            .addComponent(BotonModificaciones))
+                        .addGap(71, 71, 71))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(LabelTituloMenu)
+                        .addGap(139, 139, 139))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BotonBusqueda, BotonCaptura, BotonCerrarSesion, BotonModificaciones, BotonReportes});
@@ -89,20 +104,18 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BotonBusqueda)
-                        .addGap(18, 18, 18)
-                        .addComponent(BotonCaptura)
-                        .addGap(18, 18, 18)
-                        .addComponent(BotonReportes)
-                        .addGap(18, 18, 18)
-                        .addComponent(BotonModificaciones)
-                        .addGap(0, 49, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(BotonCerrarSesion)))
+                .addContainerGap()
+                .addComponent(LabelTituloMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(BotonBusqueda)
+                .addGap(18, 18, 18)
+                .addComponent(BotonCaptura)
+                .addGap(18, 18, 18)
+                .addComponent(BotonReportes)
+                .addGap(18, 18, 18)
+                .addComponent(BotonModificaciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonCerrarSesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,6 +144,12 @@ MODIFICACIONES ir = new MODIFICACIONES();   //Instanciamos un objeto ir de la cl
 ir.setVisible(true);                        //Usamos el objeto para que nos abra la siguiente clase
 this.dispose();                             //Cerramos la clase y sus componenetes
     }//GEN-LAST:event_BotonModificacionesActionPerformed
+
+    private void BotonBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBusquedaActionPerformed
+Busquedas ir = new Busquedas();
+ir.setVisible(true);
+this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_BotonBusquedaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,6 +194,7 @@ this.dispose();                             //Cerramos la clase y sus componenet
     private javax.swing.JButton BotonReportes;
     private rojeru_san.RSLabelFecha DisplayFecha;
     private rojeru_san.RSLabelHora DisplayHora;
+    private javax.swing.JLabel LabelTituloMenu;
     // End of variables declaration//GEN-END:variables
 }
 /*

@@ -137,13 +137,14 @@ public class LOGIN extends javax.swing.JFrame {                                 
 
     private void BotonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLoginActionPerformed
                 String x="ADMIN";                                               //Se declara una variable String para validar la contrasena
-                String y="";                                                    //Se declara una variable String para validar la contrasena
-            if (x.equals(txtpassword.getText().toString())) {                   //Sentencia que determina si la variable "x" es igual al cuadro de contrasena que esta ubicado en el frame
+                String y="admin";  
+                String z="";                                                    //Se declara una variable String para validar la contrasena
+            if (x.equals(txtpassword.getText().toString())||y.equals(txtpassword.getText().toString())) {                   //Sentencia que determina si la variable "x" es igual al cuadro de contrasena que esta ubicado en el frame
                   MENU ir = new MENU();                                         //Se crea un nuevo objeto de la clase menu
                   ir.setVisible(true);                                          //Con el objeto se hace visible la clase que contiene el Frame de menu
                   this.dispose();                                               //Cerrar esta clase
             }
-            if (y.equals(txtpassword.getText().toString())){                    //Control de usuario a nivel operador, no entra en menu
+            if (z.equals(txtpassword.getText().toString())){                    //Control de usuario a nivel operador, no entra en menu
                 CapturaOperador ir = new CapturaOperador();                     //Creamos un objeto de la clase CapturaOperador para llamar a la clase
                 ir.setVisible(true);                                            //Usamos el objeto para inicializar la clase
                 this.dispose();                                                 //Cerramoes esta clase

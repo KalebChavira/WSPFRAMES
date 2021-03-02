@@ -35,11 +35,11 @@
                           <Component id="LabelBultos" min="-2" pref="47" max="-2" attributes="0"/>
                           <Component id="LabelCantidad" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                           <Component id="LabelUsuario" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelId" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ScrollDesviacion" alignment="0" max="32767" attributes="0"/>
                           <Component id="TxtNumeroDeParte" alignment="0" max="32767" attributes="0"/>
                           <Component id="TxtDescripcion" alignment="0" max="32767" attributes="0"/>
                           <Component id="TxtCantidad" alignment="0" max="32767" attributes="0"/>
@@ -49,12 +49,18 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="BotonBuscarNumerodeParte" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="BotonBuscarDescripcion" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="BotonBuscarCantidad" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="BotonBuscarUsuario" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="BotonBuscarBultos" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="BotonBuscarId" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="BotonIrMenu" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="BotonBuscarNumerodeParte" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="BotonBuscarDescripcion" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="BotonBuscarCantidad" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="BotonBuscarUsuario" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="BotonBuscarBultos" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="BotonBuscarId" min="-2" pref="73" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -65,7 +71,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="67" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,7 +81,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelId" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TxtId" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BotonBuscarId" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -109,10 +115,18 @@
                   <Component id="ComboboxUsuarios" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BotonBuscarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LabelDesviacion" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="191" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelDesviacion" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="ScrollDesviacion" min="-2" pref="191" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="BotonIrMenu" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="61" max="32767" attributes="0"/>
               <Component id="LabelFechaInicial" min="-2" pref="24" max="-2" attributes="0"/>
@@ -244,11 +258,12 @@
     <Component class="javax.swing.JComboBox" name="ComboboxUsuarios">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Juan Moreno"/>
+            <StringItem index="1" value="Leopoldo Campos"/>
+            <StringItem index="2" value="Jose Batres"/>
+            <StringItem index="3" value="Manuel Hernandez"/>
+            <StringItem index="4" value="Kaleb Chavira"/>
           </StringArray>
         </Property>
       </Properties>
@@ -256,7 +271,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="ScrollDesviacion">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -283,6 +298,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarDescripcionActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonBuscarCantidad">
       <Properties>
@@ -296,13 +314,19 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarBultosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonBuscarUsuario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarUsuarioActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="LabelId">
       <Properties>
         <Property name="text" type="java.lang.String" value="ID:"/>
       </Properties>
@@ -315,6 +339,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarIdActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonIrMenu">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MENU"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonIrMenuActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
