@@ -24,32 +24,32 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jScrollPane1" min="-2" pref="658" max="-2" attributes="0"/>
+              <Component id="ScrollDeLaTabla" min="-2" pref="658" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="Btabla" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Component id="BotonTabla" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelDescripcion" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelNumeroSerie" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelCantidadBultos" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelCantidadTotal" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelHora" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="idtxt" alignment="0" max="32767" attributes="0"/>
-                          <Component id="descripciontxt" alignment="0" pref="286" max="32767" attributes="0"/>
-                          <Component id="numeroserietxt" alignment="0" pref="286" max="32767" attributes="0"/>
-                          <Component id="cantidadbultostxt" alignment="0" pref="286" max="32767" attributes="0"/>
-                          <Component id="cantidadtotaltxt" alignment="0" pref="286" max="32767" attributes="0"/>
-                          <Component id="fechatxt" alignment="0" pref="286" max="32767" attributes="0"/>
-                          <Component id="horatxt" alignment="0" pref="286" max="32767" attributes="0"/>
-                          <Component id="usuariocombobox" alignment="0" max="32767" attributes="0"/>
+                          <Component id="TxtID" alignment="0" max="32767" attributes="0"/>
+                          <Component id="TxtDescrpcion" alignment="0" pref="286" max="32767" attributes="0"/>
+                          <Component id="TxtNumeroSerie" alignment="0" pref="286" max="32767" attributes="0"/>
+                          <Component id="TxtCantidadBultos" alignment="0" pref="286" max="32767" attributes="0"/>
+                          <Component id="TxtCantidadTotal" alignment="0" pref="286" max="32767" attributes="0"/>
+                          <Component id="TxtFecha" alignment="0" pref="286" max="32767" attributes="0"/>
+                          <Component id="TxtHora" alignment="0" pref="286" max="32767" attributes="0"/>
+                          <Component id="ComboBoxUsuario" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="34" max="32767" attributes="0"/>
                   </Group>
@@ -57,26 +57,26 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="BMenu" linkSize="1" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="BotonMenu" linkSize="1" min="-2" pref="85" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="relojfecha" min="-2" pref="93" max="-2" attributes="0"/>
+                                  <Component id="DisplayFecha" min="-2" pref="93" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="BModificar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
-                                          <Component id="BCapturar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="BotonModificar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="BotonCapturar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="BEliminar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
-                                          <Component id="BBuscar1" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="BotonEliminar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscar" min="-2" pref="110" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                              <Component id="relojhora" min="-2" pref="103" max="-2" attributes="0"/>
+                              <Component id="DisplayHora" min="-2" pref="103" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -92,72 +92,72 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="idtxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TxtID" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="numeroserietxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelNumeroSerie" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TxtNumeroSerie" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="Btabla" linkSize="2" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="BotonTabla" linkSize="2" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="descripciontxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtDescrpcion" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cantidadbultostxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelCantidadBultos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtCantidadBultos" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cantidadtotaltxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelCantidadTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtCantidadTotal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="horatxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtHora" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fechatxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtFecha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <Component id="usuariocombobox" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelUsuario" min="-2" max="-2" attributes="0"/>
+                  <Component id="ComboBoxUsuario" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="173" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BModificar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                  <Component id="BBuscar1" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="BotonModificar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="BotonBuscar" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BCapturar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                  <Component id="BEliminar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="BotonCapturar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="BotonEliminar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="BMenu" linkSize="2" min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="BotonMenu" linkSize="2" min="-2" pref="54" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="relojhora" pref="26" max="32767" attributes="0"/>
-                  <Component id="relojfecha" pref="0" max="32767" attributes="0"/>
+                  <Component id="DisplayHora" pref="26" max="32767" attributes="0"/>
+                  <Component id="DisplayFecha" pref="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
           </Group>
-          <Component id="jScrollPane1" max="32767" attributes="0"/>
+          <Component id="ScrollDeLaTabla" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="BMenu">
+    <Component class="javax.swing.JButton" name="BotonMenu">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -165,10 +165,10 @@
         <Property name="text" type="java.lang.String" value="MENU"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BMenuActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMenuActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BCapturar">
+    <Component class="javax.swing.JButton" name="BotonCapturar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -176,10 +176,10 @@
         <Property name="text" type="java.lang.String" value="CAPTURAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BCapturarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCapturarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BModificar">
+    <Component class="javax.swing.JButton" name="BotonModificar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -187,10 +187,10 @@
         <Property name="text" type="java.lang.String" value="MODIFICAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BModificarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonModificarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Btabla">
+    <Component class="javax.swing.JButton" name="BotonTabla">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -198,10 +198,10 @@
         <Property name="text" type="java.lang.String" value="TABLA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtablaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonTablaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BEliminar">
+    <Component class="javax.swing.JButton" name="BotonEliminar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -209,14 +209,14 @@
         <Property name="text" type="java.lang.String" value="ELIMINAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BEliminarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonEliminarActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="ScrollDeLaTabla">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tablabase">
+        <Component class="javax.swing.JTable" name="TablaModelo">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="0" rowCount="4"/>
@@ -229,12 +229,12 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tablabaseMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TablaModeloMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="LabelID">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -242,12 +242,12 @@
         <Property name="text" type="java.lang.String" value="ID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idtxt">
+    <Component class="javax.swing.JTextField" name="TxtID">
       <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="idtxtKeyTyped"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TxtIDKeyTyped"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LabelNumeroSerie">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -255,9 +255,9 @@
         <Property name="text" type="java.lang.String" value="NUMERO S:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="numeroserietxt">
+    <Component class="javax.swing.JTextField" name="TxtNumeroSerie">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="LabelDescripcion">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -265,9 +265,9 @@
         <Property name="text" type="java.lang.String" value="DESCRIPCION:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="descripciontxt">
+    <Component class="javax.swing.JTextField" name="TxtDescrpcion">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="LabelCantidadBultos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -275,12 +275,12 @@
         <Property name="text" type="java.lang.String" value="CANTIDAD B:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="cantidadbultostxt">
+    <Component class="javax.swing.JTextField" name="TxtCantidadBultos">
       <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cantidadbultostxtKeyTyped"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TxtCantidadBultosKeyTyped"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="LabelCantidadTotal">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -288,12 +288,12 @@
         <Property name="text" type="java.lang.String" value="CANTIDAD T:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="cantidadtotaltxt">
+    <Component class="javax.swing.JTextField" name="TxtCantidadTotal">
       <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cantidadtotaltxtKeyTyped"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TxtCantidadTotalKeyTyped"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="LabelFecha">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -301,7 +301,7 @@
         <Property name="text" type="java.lang.String" value="FECHA:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="LabelHora">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -309,11 +309,11 @@
         <Property name="text" type="java.lang.String" value="HORA:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fechatxt">
+    <Component class="javax.swing.JTextField" name="TxtFecha">
     </Component>
-    <Component class="javax.swing.JTextField" name="horatxt">
+    <Component class="javax.swing.JTextField" name="TxtHora">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="LabelUsuario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="11" style="2"/>
@@ -321,11 +321,11 @@
         <Property name="text" type="java.lang.String" value="USUARIO:"/>
       </Properties>
     </Component>
-    <Component class="rojeru_san.RSLabelFecha" name="relojfecha">
+    <Component class="rojeru_san.RSLabelFecha" name="DisplayFecha">
     </Component>
-    <Component class="rojeru_san.RSLabelHora" name="relojhora">
+    <Component class="rojeru_san.RSLabelHora" name="DisplayHora">
     </Component>
-    <Component class="javax.swing.JComboBox" name="usuariocombobox">
+    <Component class="javax.swing.JComboBox" name="ComboBoxUsuario">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="5">
@@ -341,7 +341,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="BBuscar1">
+    <Component class="javax.swing.JButton" name="BotonBuscar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -349,7 +349,7 @@
         <Property name="text" type="java.lang.String" value="BUSCAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BBuscar1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

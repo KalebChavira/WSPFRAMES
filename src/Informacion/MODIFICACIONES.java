@@ -5,7 +5,6 @@
  */
 package Informacion;
 
-import Informacion.FRAMES;
 import Inicio.MENU;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -58,8 +57,8 @@ public class MODIFICACIONES extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error al cargar Dirver");                                              //Mensaje al usuario para verificacion
         }
         try {
-  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
-   conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\GitHub\\Wsp-Frames\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+ //  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
  // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                  //Mensaje al usuario para verificacion
         } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
          //   JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
@@ -81,7 +80,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         tabla.addColumn("HORA");
         tabla.addColumn("FECHA");
         tabla.addColumn("USUARIO");
-        this.tablabase.setModel(tabla);                     //Funcion que la tabla se acomoda en el modelo del frame
+        this.TablaModelo.setModel(tabla);                     //Funcion que la tabla se acomoda en el modelo del frame
     }     
             
     public void cargarDatos() {                                                                                         //Funcion con la que se carga los datos en la tabla del frame
@@ -110,76 +109,76 @@ public class MODIFICACIONES extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BMenu = new javax.swing.JButton();
-        BCapturar = new javax.swing.JButton();
-        BModificar = new javax.swing.JButton();
-        Btabla = new javax.swing.JButton();
-        BEliminar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tablabase = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        idtxt = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        numeroserietxt = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        descripciontxt = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        cantidadbultostxt = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        cantidadtotaltxt = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        fechatxt = new javax.swing.JTextField();
-        horatxt = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        relojfecha = new rojeru_san.RSLabelFecha();
-        relojhora = new rojeru_san.RSLabelHora();
-        usuariocombobox = new javax.swing.JComboBox<>();
-        BBuscar1 = new javax.swing.JButton();
+        BotonMenu = new javax.swing.JButton();
+        BotonCapturar = new javax.swing.JButton();
+        BotonModificar = new javax.swing.JButton();
+        BotonTabla = new javax.swing.JButton();
+        BotonEliminar = new javax.swing.JButton();
+        ScrollDeLaTabla = new javax.swing.JScrollPane();
+        TablaModelo = new javax.swing.JTable();
+        LabelID = new javax.swing.JLabel();
+        TxtID = new javax.swing.JTextField();
+        LabelNumeroSerie = new javax.swing.JLabel();
+        TxtNumeroSerie = new javax.swing.JTextField();
+        LabelDescripcion = new javax.swing.JLabel();
+        TxtDescrpcion = new javax.swing.JTextField();
+        LabelCantidadBultos = new javax.swing.JLabel();
+        TxtCantidadBultos = new javax.swing.JTextField();
+        LabelCantidadTotal = new javax.swing.JLabel();
+        TxtCantidadTotal = new javax.swing.JTextField();
+        LabelFecha = new javax.swing.JLabel();
+        LabelHora = new javax.swing.JLabel();
+        TxtFecha = new javax.swing.JTextField();
+        TxtHora = new javax.swing.JTextField();
+        LabelUsuario = new javax.swing.JLabel();
+        DisplayFecha = new rojeru_san.RSLabelFecha();
+        DisplayHora = new rojeru_san.RSLabelHora();
+        ComboBoxUsuario = new javax.swing.JComboBox<>();
+        BotonBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        BMenu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BMenu.setText("MENU");
-        BMenu.addActionListener(new java.awt.event.ActionListener() {
+        BotonMenu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonMenu.setText("MENU");
+        BotonMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BMenuActionPerformed(evt);
+                BotonMenuActionPerformed(evt);
             }
         });
 
-        BCapturar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BCapturar.setText("CAPTURAR");
-        BCapturar.addActionListener(new java.awt.event.ActionListener() {
+        BotonCapturar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonCapturar.setText("CAPTURAR");
+        BotonCapturar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BCapturarActionPerformed(evt);
+                BotonCapturarActionPerformed(evt);
             }
         });
 
-        BModificar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BModificar.setText("MODIFICAR");
-        BModificar.addActionListener(new java.awt.event.ActionListener() {
+        BotonModificar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonModificar.setText("MODIFICAR");
+        BotonModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BModificarActionPerformed(evt);
+                BotonModificarActionPerformed(evt);
             }
         });
 
-        Btabla.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Btabla.setText("TABLA");
-        Btabla.addActionListener(new java.awt.event.ActionListener() {
+        BotonTabla.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonTabla.setText("TABLA");
+        BotonTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtablaActionPerformed(evt);
+                BotonTablaActionPerformed(evt);
             }
         });
 
-        BEliminar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BEliminar.setText("ELIMINAR");
-        BEliminar.addActionListener(new java.awt.event.ActionListener() {
+        BotonEliminar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonEliminar.setText("ELIMINAR");
+        BotonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BEliminarActionPerformed(evt);
+                BotonEliminarActionPerformed(evt);
             }
         });
 
-        tablabase.setModel(new javax.swing.table.DefaultTableModel(
+        TablaModelo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -190,62 +189,62 @@ public class MODIFICACIONES extends javax.swing.JFrame {
 
             }
         ));
-        tablabase.addMouseListener(new java.awt.event.MouseAdapter() {
+        TablaModelo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tablabaseMouseClicked(evt);
+                TablaModeloMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(tablabase);
+        ScrollDeLaTabla.setViewportView(TablaModelo);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel1.setText("ID:");
+        LabelID.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelID.setText("ID:");
 
-        idtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        TxtID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                idtxtKeyTyped(evt);
+                TxtIDKeyTyped(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel2.setText("NUMERO S:");
+        LabelNumeroSerie.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelNumeroSerie.setText("NUMERO S:");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel3.setText("DESCRIPCION:");
+        LabelDescripcion.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelDescripcion.setText("DESCRIPCION:");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel4.setText("CANTIDAD B:");
+        LabelCantidadBultos.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelCantidadBultos.setText("CANTIDAD B:");
 
-        cantidadbultostxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        TxtCantidadBultos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                cantidadbultostxtKeyTyped(evt);
+                TxtCantidadBultosKeyTyped(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel5.setText("CANTIDAD T:");
+        LabelCantidadTotal.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelCantidadTotal.setText("CANTIDAD T:");
 
-        cantidadtotaltxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        TxtCantidadTotal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                cantidadtotaltxtKeyTyped(evt);
+                TxtCantidadTotalKeyTyped(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel6.setText("FECHA:");
+        LabelFecha.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelFecha.setText("FECHA:");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel7.setText("HORA:");
+        LabelHora.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelHora.setText("HORA:");
 
-        jLabel8.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        jLabel8.setText("USUARIO:");
+        LabelUsuario.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelUsuario.setText("USUARIO:");
 
-        usuariocombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Juan Moreno", "Leopoldo Campos", "Jose Batres", "Manuel Hernandez", "Kaleb Chavira" }));
+        ComboBoxUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Juan Moreno", "Leopoldo Campos", "Jose Batres", "Manuel Hernandez", "Kaleb Chavira" }));
 
-        BBuscar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        BBuscar1.setText("BUSCAR");
-        BBuscar1.addActionListener(new java.awt.event.ActionListener() {
+        BotonBuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        BotonBuscar.setText("BUSCAR");
+        BotonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BBuscar1ActionPerformed(evt);
+                BotonBuscarActionPerformed(evt);
             }
         });
 
@@ -254,55 +253,55 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ScrollDeLaTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Btabla, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BotonTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
+                            .addComponent(LabelID)
+                            .addComponent(LabelUsuario)
+                            .addComponent(LabelDescripcion)
+                            .addComponent(LabelNumeroSerie)
+                            .addComponent(LabelCantidadBultos)
+                            .addComponent(LabelCantidadTotal)
+                            .addComponent(LabelFecha)
+                            .addComponent(LabelHora))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(idtxt)
-                            .addComponent(descripciontxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                            .addComponent(numeroserietxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                            .addComponent(cantidadbultostxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                            .addComponent(cantidadtotaltxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                            .addComponent(fechatxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                            .addComponent(horatxt, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                            .addComponent(usuariocombobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(TxtID)
+                            .addComponent(TxtDescrpcion, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                            .addComponent(TxtNumeroSerie, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                            .addComponent(TxtCantidadBultos, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                            .addComponent(TxtCantidadTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                            .addComponent(TxtFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                            .addComponent(TxtHora, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                            .addComponent(ComboBoxUsuario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(34, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(BMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BotonMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(174, 174, 174))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(relojfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(BModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BCapturar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(BotonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonCapturar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(BEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(1, 1, 1)
-                                .addComponent(relojhora, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(DisplayHora, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BCapturar, BEliminar, BMenu, BModificar, Btabla});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BotonCapturar, BotonEliminar, BotonMenu, BotonModificar, BotonTabla});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,69 +310,69 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(idtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelID)
+                            .addComponent(TxtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(numeroserietxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(Btabla, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelNumeroSerie)
+                            .addComponent(TxtNumeroSerie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BotonTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(descripciontxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelDescripcion)
+                    .addComponent(TxtDescrpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(cantidadbultostxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelCantidadBultos)
+                    .addComponent(TxtCantidadBultos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(cantidadtotaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelCantidadTotal)
+                    .addComponent(TxtCantidadTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(horatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelHora)
+                    .addComponent(TxtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(fechatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelFecha)
+                    .addComponent(TxtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(usuariocombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelUsuario)
+                    .addComponent(ComboBoxUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BotonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BCapturar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BotonCapturar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BotonMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(relojhora, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(relojfecha, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(DisplayHora, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(4, 4, 4))
-            .addComponent(jScrollPane1)
+            .addComponent(ScrollDeLaTabla)
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BCapturar, BEliminar, BMenu, BModificar, Btabla});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BotonCapturar, BotonEliminar, BotonMenu, BotonModificar, BotonTabla});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BMenuActionPerformed
+    private void BotonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMenuActionPerformed
 MENU ir = new MENU();
 ir.setVisible(true);// TODO add your handling code here:
 this.dispose();
-    }//GEN-LAST:event_BMenuActionPerformed
+    }//GEN-LAST:event_BotonMenuActionPerformed
 
-    private void BtablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtablaActionPerformed
+    private void BotonTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTablaActionPerformed
        String data[] = new String[8];                                                                                  //Variable que almacena los datos de la consulta
-       String id = idtxt.getText();
+       String id = TxtID.getText();
         String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO FROM Captura ORDER BY ID;";                  //Consulta sql de buscar datos
         try {
             tabla.setRowCount(0);
@@ -381,21 +380,21 @@ this.dispose();
 
             while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
                 data[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
-                idtxt.setText("");
+                TxtID.setText("");
                 data[1] = resultado.getString("NUMERODEPARTE");           //Variable del arreglo que recibira todos los numeros de parte
-                numeroserietxt.setText("");
+                TxtNumeroSerie.setText("");
                 data[2] = resultado.getString("DESCRIPCION");             //Variable del arreglo que recibira todas las descriopciones
-                descripciontxt.setText("");
+                TxtDescrpcion.setText("");
                 data[3] = resultado.getString("CANTIDADBULTOS");          //Variable del arreglo que recibira todas las cantidades de bultos
-                cantidadbultostxt.setText("");
+                TxtCantidadBultos.setText("");
                 data[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
-                cantidadtotaltxt.setText("");
+                TxtCantidadTotal.setText("");
                 data[5] = resultado.getString("HORA");
-                horatxt.setText("");
+                TxtHora.setText("");
                 data[6] = resultado.getString("FECHA");
-                fechatxt.setText("");
+                TxtFecha.setText("");
                 data[7] = resultado.getString("USUARIO");
-                usuariocombobox.setSelectedItem("");
+                ComboBoxUsuario.setSelectedItem("");
                 tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
         } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
@@ -403,33 +402,33 @@ this.dispose();
             System.out.println(ex+"");                                                          //Imprimir la excepcion
         }
 
-    }//GEN-LAST:event_BtablaActionPerformed
+    }//GEN-LAST:event_BotonTablaActionPerformed
 
-    private void BCapturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCapturarActionPerformed
-      String noparte = this.numeroserietxt.getText();                              //Asiganacion a una variable String que obtiene el texto de un JText
-    String descripcion = this.descripciontxt.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
-    String cantidadbultos = this.cantidadbultostxt.getText();                      //Asiganacion a una variable String que obtiene el texto de un JText
-    String cantidadtotal = this.cantidadtotaltxt.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
-    String hora = this.horatxt.getText();                                          //Asiganacion a una variable String que obtiene el texto de un JText
-    String fecha = this.fechatxt.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
-    String clerk = usuariocombobox.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
+    private void BotonCapturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCapturarActionPerformed
+      String noparte = this.TxtNumeroSerie.getText();                              //Asiganacion a una variable String que obtiene el texto de un JText
+    String descripcion = this.TxtDescrpcion.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadbultos = this.TxtCantidadBultos.getText();                      //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadtotal = this.TxtCantidadTotal.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String hora = this.TxtHora.getText();                                          //Asiganacion a una variable String que obtiene el texto de un JText
+    String fecha = this.TxtFecha.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String clerk = ComboBoxUsuario.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
   
-    if(numeroserietxt.getText()==""){
+    if(TxtNumeroSerie.getText()==""){
     JOptionPane.showMessageDialog(null,"Numero de serie vacio...");
     }
-     if(descripciontxt.getText()==""){
+     if(TxtDescrpcion.getText()==""){
     JOptionPane.showMessageDialog(null,"Descripcion vacia...");
     }
-      if(cantidadbultostxt.getText()==""){
+      if(TxtCantidadBultos.getText()==""){
     JOptionPane.showMessageDialog(null,"Cantidad de bultos vacia...");
     }
-       if(cantidadtotaltxt.getText()==""){
+       if(TxtCantidadTotal.getText()==""){
     JOptionPane.showMessageDialog(null,"Cantidad Total Vacia...");
     }
-        if(horatxt.getText()==""){
+        if(TxtHora.getText()==""){
     JOptionPane.showMessageDialog(null,"Hora mal ingresada...");
     }
-         if(fechatxt.getText()==""){
+         if(TxtFecha.getText()==""){
     JOptionPane.showMessageDialog(null,"Fecha mal ingresada...");
     }
     
@@ -438,14 +437,16 @@ this.dispose();
     try {
         sentencia.executeUpdate(SQL);                                                   //Se ejecuta el Query SQL en la base de datos
         JOptionPane.showMessageDialog(null,"CAPTURADO");                                //Mensaje al usuario
+        tabla.setRowCount(0);
+            BotonTablaActionPerformed(evt);
     } catch (SQLException ex) {                                                         //Excepcion en caso de que el query no funcione
         JOptionPane.showMessageDialog(null,"NO CAPTURADO");                             //Mensaje al usuario
         Logger.getLogger(FRAMES.class.getName()).log(Level.SEVERE, null, ex);           //Excepcion en caso de que el query no funcione
     }
-    }//GEN-LAST:event_BCapturarActionPerformed
+    }//GEN-LAST:event_BotonCapturarActionPerformed
 
-    private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
-    String id = idtxt.getText();
+    private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
+    String id = TxtID.getText();
         try {
             String SQL ="DELETE * FROM Captura WHERE ID = '"+id+"'";
             sentencia.executeUpdate(SQL);
@@ -454,32 +455,32 @@ this.dispose();
         } catch (Exception e) {
         }
         
-    }//GEN-LAST:event_BEliminarActionPerformed
+    }//GEN-LAST:event_BotonEliminarActionPerformed
 
-    private void BBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscar1ActionPerformed
+    private void BotonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarActionPerformed
        String data[] = new String[8];                                                                                  //Variable que almacena los datos de la consulta
-       String id = idtxt.getText();
+       String id = TxtID.getText();
         String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO FROM Captura WHERE ID = '"+id+"';";                  //Consulta sql de buscar datos
         try {
             ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
             tabla.setRowCount(0);
             while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
                 data[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
-                idtxt.setText(data[0]);
+                TxtID.setText(data[0]);
                 data[1] = resultado.getString("NUMERODEPARTE");           //Variable del arreglo que recibira todos los numeros de parte
-                numeroserietxt.setText(data[1]);
+                TxtNumeroSerie.setText(data[1]);
                 data[2] = resultado.getString("DESCRIPCION");             //Variable del arreglo que recibira todas las descriopciones
-                descripciontxt.setText(data[2]);
+                TxtDescrpcion.setText(data[2]);
                 data[3] = resultado.getString("CANTIDADBULTOS");          //Variable del arreglo que recibira todas las cantidades de bultos
-                cantidadbultostxt.setText(data[3]);
+                TxtCantidadBultos.setText(data[3]);
                 data[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
-                cantidadtotaltxt.setText(data[4]);
+                TxtCantidadTotal.setText(data[4]);
                 data[5] = resultado.getString("HORA");
-                horatxt.setText(data[5]);
+                TxtHora.setText(data[5]);
                 data[6] = resultado.getString("FECHA");
-                fechatxt.setText(data[6]);
+                TxtFecha.setText(data[6]);
                 data[7] = resultado.getString("USUARIO");
-                usuariocombobox.setSelectedItem(data[7]);
+                ComboBoxUsuario.setSelectedItem(data[7]);
                 tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
         } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
@@ -487,70 +488,70 @@ this.dispose();
             System.out.println(ex+"");                                                          //Imprimir la excepcion
         }
 
-    }//GEN-LAST:event_BBuscar1ActionPerformed
+    }//GEN-LAST:event_BotonBuscarActionPerformed
 
-    private void BModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BModificarActionPerformed
-             String noparte = this.numeroserietxt.getText();                              //Asiganacion a una variable String que obtiene el texto de un JText
-    String descripcion = this.descripciontxt.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
-    String cantidadbultos = this.cantidadbultostxt.getText();                      //Asiganacion a una variable String que obtiene el texto de un JText
-    String cantidadtotal = this.cantidadtotaltxt.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
-    String hora = this.horatxt.getText();                                          //Asiganacion a una variable String que obtiene el texto de un JText
-    String fecha = this.fechatxt.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
-    String clerk = usuariocombobox.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
-    String id = idtxt.getText();
+    private void BotonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonModificarActionPerformed
+             String noparte = this.TxtNumeroSerie.getText();                              //Asiganacion a una variable String que obtiene el texto de un JText
+    String descripcion = this.TxtDescrpcion.getText();                            //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadbultos = this.TxtCantidadBultos.getText();                      //Asiganacion a una variable String que obtiene el texto de un JText
+    String cantidadtotal = this.TxtCantidadTotal.getText();                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String hora = this.TxtHora.getText();                                          //Asiganacion a una variable String que obtiene el texto de un JText
+    String fecha = this.TxtFecha.getText();                                        //Asiganacion a una variable String que obtiene el texto de un JText
+    String clerk = ComboBoxUsuario.getSelectedItem().toString();                   //Asiganacion a una variable String que obtiene el texto de un JText
+    String id = TxtID.getText();
     
         try {
           String SqlUpdate = "UPDATE Captura set NUMERODEPARTE= '"+noparte+"', DESCRIPCION='"+descripcion+"', CANTIDADBULTOS='" + cantidadbultos+"', CANTIDADTOTAL='"+cantidadtotal+"', HORA='"+ hora+"', FECHA='" +fecha+"', USUARIO='"+clerk +"' WHERE ID = '"+id+"';";   
           sentencia.executeUpdate(SqlUpdate);
           tabla.setRowCount(0);
-            BtablaActionPerformed(evt);
+            BotonTablaActionPerformed(evt);
             JOptionPane.showMessageDialog(null,"SE HA MODIFICADO EL REGISTRO NO." + id);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"no se modificaron los datos");
             System.out.println(""+ e);
         }
    
-    }//GEN-LAST:event_BModificarActionPerformed
+    }//GEN-LAST:event_BotonModificarActionPerformed
 
-    private void tablabaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablabaseMouseClicked
-      int seleccionar=tablabase.rowAtPoint(evt.getPoint());
-      idtxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,0)));
-      numeroserietxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,1)));
-      descripciontxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,2)));
-      cantidadbultostxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,3)));
-      cantidadtotaltxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,4)));
-      horatxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,5)));
-      fechatxt.setText(String.valueOf(tablabase.getValueAt(seleccionar,6)));
-      usuariocombobox.setSelectedItem(String.valueOf(tablabase.getValueAt(seleccionar,7)));
+    private void TablaModeloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaModeloMouseClicked
+      int seleccionar=TablaModelo.rowAtPoint(evt.getPoint());
+      TxtID.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,0)));
+      TxtNumeroSerie.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,1)));
+      TxtDescrpcion.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,2)));
+      TxtCantidadBultos.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,3)));
+      TxtCantidadTotal.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,4)));
+      TxtHora.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,5)));
+      TxtFecha.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,6)));
+      ComboBoxUsuario.setSelectedItem(String.valueOf(TablaModelo.getValueAt(seleccionar,7)));
       
-    }//GEN-LAST:event_tablabaseMouseClicked
+    }//GEN-LAST:event_TablaModeloMouseClicked
 
-    private void idtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idtxtKeyTyped
+    private void TxtIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtIDKeyTyped
         char validar = evt.getKeyChar();
         
         if (Character.isLetter(validar)){
             getToolkit().beep();
             evt.consume();
         }
-    }//GEN-LAST:event_idtxtKeyTyped
+    }//GEN-LAST:event_TxtIDKeyTyped
 
-    private void cantidadbultostxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadbultostxtKeyTyped
+    private void TxtCantidadBultosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtCantidadBultosKeyTyped
         char validar = evt.getKeyChar();
         
         if (Character.isLetter(validar)){
             getToolkit().beep();
             evt.consume();
         }
-    }//GEN-LAST:event_cantidadbultostxtKeyTyped
+    }//GEN-LAST:event_TxtCantidadBultosKeyTyped
 
-    private void cantidadtotaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadtotaltxtKeyTyped
+    private void TxtCantidadTotalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtCantidadTotalKeyTyped
         char validar = evt.getKeyChar();
         
         if (Character.isLetter(validar)){
             getToolkit().beep();
             evt.consume();
         }
-    }//GEN-LAST:event_cantidadtotaltxtKeyTyped
+    }//GEN-LAST:event_TxtCantidadTotalKeyTyped
 
     /**
      * @param args the command line arguments
@@ -588,31 +589,31 @@ this.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BBuscar1;
-    private javax.swing.JButton BCapturar;
-    private javax.swing.JButton BEliminar;
-    private javax.swing.JButton BMenu;
-    private javax.swing.JButton BModificar;
-    private javax.swing.JButton Btabla;
-    private javax.swing.JTextField cantidadbultostxt;
-    private javax.swing.JTextField cantidadtotaltxt;
-    private javax.swing.JTextField descripciontxt;
-    private javax.swing.JTextField fechatxt;
-    private javax.swing.JTextField horatxt;
-    private javax.swing.JTextField idtxt;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField numeroserietxt;
-    private rojeru_san.RSLabelFecha relojfecha;
-    private rojeru_san.RSLabelHora relojhora;
-    private javax.swing.JTable tablabase;
-    private javax.swing.JComboBox<String> usuariocombobox;
+    private javax.swing.JButton BotonBuscar;
+    private javax.swing.JButton BotonCapturar;
+    private javax.swing.JButton BotonEliminar;
+    private javax.swing.JButton BotonMenu;
+    private javax.swing.JButton BotonModificar;
+    private javax.swing.JButton BotonTabla;
+    private javax.swing.JComboBox<String> ComboBoxUsuario;
+    private rojeru_san.RSLabelFecha DisplayFecha;
+    private rojeru_san.RSLabelHora DisplayHora;
+    private javax.swing.JLabel LabelCantidadBultos;
+    private javax.swing.JLabel LabelCantidadTotal;
+    private javax.swing.JLabel LabelDescripcion;
+    private javax.swing.JLabel LabelFecha;
+    private javax.swing.JLabel LabelHora;
+    private javax.swing.JLabel LabelID;
+    private javax.swing.JLabel LabelNumeroSerie;
+    private javax.swing.JLabel LabelUsuario;
+    private javax.swing.JScrollPane ScrollDeLaTabla;
+    private javax.swing.JTable TablaModelo;
+    private javax.swing.JTextField TxtCantidadBultos;
+    private javax.swing.JTextField TxtCantidadTotal;
+    private javax.swing.JTextField TxtDescrpcion;
+    private javax.swing.JTextField TxtFecha;
+    private javax.swing.JTextField TxtHora;
+    private javax.swing.JTextField TxtID;
+    private javax.swing.JTextField TxtNumeroSerie;
     // End of variables declaration//GEN-END:variables
 }
