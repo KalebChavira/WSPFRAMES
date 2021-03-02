@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -35,6 +35,7 @@
                           <Component id="LabelBultos" min="-2" pref="47" max="-2" attributes="0"/>
                           <Component id="LabelCantidad" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                           <Component id="LabelUsuario" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -44,6 +45,7 @@
                           <Component id="TxtCantidad" alignment="0" max="32767" attributes="0"/>
                           <Component id="TxtBultos" alignment="0" max="32767" attributes="0"/>
                           <Component id="ComboboxUsuarios" alignment="0" max="32767" attributes="0"/>
+                          <Component id="TxtId" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -52,6 +54,7 @@
                           <Component id="BotonBuscarCantidad" min="-2" pref="73" max="-2" attributes="0"/>
                           <Component id="BotonBuscarUsuario" min="-2" pref="73" max="-2" attributes="0"/>
                           <Component id="BotonBuscarBultos" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="BotonBuscarId" min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -70,7 +73,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="ScrollTabla" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarId" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelNumeroDeParte" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="TxtNumeroDeParte" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -105,7 +114,7 @@
                   <Component id="LabelDesviacion" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="191" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="66" max="32767" attributes="0"/>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
               <Component id="LabelFechaInicial" min="-2" pref="24" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="LabelFechaFinal" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
@@ -266,6 +275,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarNumerodeParteActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonBuscarDescripcion">
       <Properties>
@@ -289,6 +301,21 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ID:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtId">
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarId">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarIdActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

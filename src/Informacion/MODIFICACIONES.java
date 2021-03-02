@@ -503,7 +503,7 @@ this.dispose();
     String desviacion =this.TxtDesviacion.getText().toString();
     
         try {
-          String SqlUpdate = "UPDATE Captura set NUMERODEPARTE= '"+noparte+"', DESCRIPCION='"+descripcion+"', CANTIDADBULTOS='" + cantidadbultos+"', CANTIDADTOTAL='"+cantidadtotal+"', HORA='"+ hora+"', FECHA='" +fecha+"', USUARIO='"+clerk +"', DESVIACION='"+ desviacion + " WHERE ID = '"+id+"';";   
+          String SqlUpdate = "UPDATE Captura set NUMERODEPARTE='"+noparte+"', DESCRIPCION='"+descripcion+"', CANTIDADBULTOS='" + cantidadbultos+"', CANTIDADTOTAL='"+cantidadtotal+"', HORA='"+ hora+"', FECHA='" +fecha+"', USUARIO='"+clerk +"', DESVIACION='"+ desviacion + ", WHERE ID= '"+id+"';";   
           sentencia.executeUpdate(SqlUpdate);
           tabla.setRowCount(0);
             BotonTablaActionPerformed(evt);
@@ -525,6 +525,7 @@ this.dispose();
       TxtHora.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,5)));
       TxtFecha.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,6)));
       ComboBoxUsuario.setSelectedItem(String.valueOf(TablaModelo.getValueAt(seleccionar,7)));
+      TxtDesviacion.setText(String.valueOf(TablaModelo.getValueAt(seleccionar,8)));
       
     }//GEN-LAST:event_TablaModeloMouseClicked
 
