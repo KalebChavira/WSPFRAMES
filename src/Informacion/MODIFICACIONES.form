@@ -23,13 +23,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="ScrollDeLaTabla" min="-2" pref="658" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="ScrollDeLaTabla" min="-2" pref="800" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="BotonTabla" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="LabelUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -39,6 +37,7 @@
                           <Component id="LabelCantidadTotal" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="LabelFecha" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="LabelHora" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelFecha1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -50,36 +49,31 @@
                           <Component id="TxtFecha" alignment="0" pref="286" max="32767" attributes="0"/>
                           <Component id="TxtHora" alignment="0" pref="286" max="32767" attributes="0"/>
                           <Component id="ComboBoxUsuario" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="BotonMenu" linkSize="1" min="-2" pref="85" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="117" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="DisplayFecha" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="DisplayFecha" min="-2" pref="93" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="BotonModificar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
-                                          <Component id="BotonCapturar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="BotonEliminar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
-                                          <Component id="BotonBuscar" min="-2" pref="110" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="BotonModificar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="BotonCapturar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="BotonTabla" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                              <Component id="DisplayHora" min="-2" pref="103" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="BotonEliminar" linkSize="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="BotonBuscar" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="BotonMenu" linkSize="1" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <Component id="DisplayHora" min="-2" pref="103" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -89,21 +83,16 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LabelID" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TxtID" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LabelNumeroSerie" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TxtNumeroSerie" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="BotonTabla" linkSize="2" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelNumeroSerie" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtNumeroSerie" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TxtDescrpcion" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -129,11 +118,19 @@
                   <Component id="TxtFecha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LabelUsuario" min="-2" max="-2" attributes="0"/>
-                  <Component id="ComboBoxUsuario" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ComboBoxUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="173" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="LabelFecha1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" pref="144" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="BotonModificar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                   <Component id="BotonBuscar" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
@@ -144,7 +141,10 @@
                   <Component id="BotonEliminar" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="BotonMenu" linkSize="2" min="-2" pref="54" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BotonMenu" linkSize="2" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="BotonTabla" linkSize="2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="DisplayHora" pref="26" max="32767" attributes="0"/>
@@ -352,5 +352,28 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarActionPerformed"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JLabel" name="LabelFecha1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="2"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="DESVIACION:"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="TxtDesviacion">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
