@@ -27,48 +27,71 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="ScrollTabla" min="-2" pref="648" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="LabelDesviacion" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                          <Component id="LabelDescripcion" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                          <Component id="LabelNumeroDeParte" min="-2" pref="79" max="-2" attributes="0"/>
-                          <Component id="LabelBultos" min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="LabelCantidad" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                          <Component id="LabelUsuario" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="LabelId" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="ScrollDesviacion" alignment="0" max="32767" attributes="0"/>
-                          <Component id="TxtNumeroDeParte" alignment="0" max="32767" attributes="0"/>
-                          <Component id="TxtDescripcion" alignment="0" max="32767" attributes="0"/>
-                          <Component id="TxtCantidad" alignment="0" max="32767" attributes="0"/>
-                          <Component id="TxtBultos" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ComboboxUsuarios" alignment="0" max="32767" attributes="0"/>
-                          <Component id="TxtId" max="32767" attributes="0"/>
-                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="BotonIrMenu" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="BotonBuscarNumerodeParte" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="BotonBuscarDescripcion" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="BotonBuscarCantidad" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="BotonBuscarUsuario" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="BotonBuscarBultos" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="BotonBuscarId" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="LabelDesviacion" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                  <Component id="LabelDescripcion" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <Component id="LabelNumeroDeParte" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <Component id="LabelBultos" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="LabelCantidad" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <Component id="LabelUsuario" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="LabelId" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton1" min="-2" pref="73" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="ScrollDesviacion" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtNumeroDeParte" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtDescripcion" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtCantidad" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtBultos" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ComboboxUsuarios" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtId" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="BotonIrMenu" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="BotonBuscarNumerodeParte" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarDescripcion" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarCantidad" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarUsuario" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarBultos" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarId" min="-2" pref="73" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="LabelEjemplo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="666" pref="666" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="LabelFechaFinal" alignment="0" max="32767" attributes="0"/>
-                          <Component id="LabelFechaInicial" alignment="0" pref="110" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="LabelFechaFinal" max="32767" attributes="0"/>
+                          <Component id="LabelFechaInicial" pref="77" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelFechaEjemplo" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="TxtFechaInicial" pref="92" max="32767" attributes="0"/>
+                                  <Component id="TxtFechaFinal" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="BotonBuscarFechas" min="-2" pref="73" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -118,8 +141,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="LabelDesviacion" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="LabelDesviacion" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton1" max="32767" attributes="0"/>
+                          </Group>
                           <Component id="ScrollDesviacion" min="-2" pref="191" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -129,10 +156,29 @@
                   </Group>
               </Group>
               <EmptySpace pref="61" max="32767" attributes="0"/>
-              <Component id="LabelFechaInicial" min="-2" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelFechaInicial" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="TxtFechaInicial" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelFechaFinal" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="TxtFechaFinal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Component id="BotonBuscarFechas" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="LabelFechaFinal" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelFechaEjemplo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelEjemplo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -347,6 +393,36 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonIrMenuActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtFechaInicial">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtFechaFinal">
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarFechas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarFechasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelFechaEjemplo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelEjemplo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ejemplo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TABLA"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

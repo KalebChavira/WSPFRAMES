@@ -77,14 +77,14 @@ public class Busquedas extends javax.swing.JFrame {
         tabla.addColumn("CANTIDAD TOTAL");                  //Titulo 5 de la Tabla
         tabla.addColumn("USUARIO");
         tabla.addColumn("DESVIACION");
-        tabla.addColumn("HORA");
         tabla.addColumn("FECHA");
+        tabla.addColumn("HORA");
         this.TablaModelo.setModel(tabla);                     //Funcion que la tabla se acomoda en el modelo del frame
     }     
             
     public void cargarDatos() {                                                                                         //Funcion con la que se carga los datos en la tabla del frame
-        String data[] = new String[7];                                                                                  //Variable que almacena los datos de la consulta
-        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,USUARIO,DESVIACION FROM Captura ORDER BY ID;";                  //Consulta sql de buscar datos
+        String data[] = new String[9];                                                                                  //Variable que almacena los datos de la consulta
+        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,USUARIO,DESVIACION,FECHA,HORA FROM Captura ORDER BY ID;";                  //Consulta sql de buscar datos
         try {
             ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
 
@@ -96,6 +96,8 @@ public class Busquedas extends javax.swing.JFrame {
                 data[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
                 data[5] = resultado.getString("USUARIO");
                 data[6] = resultado.getString("DESVIACION");
+                data[7] = resultado.getString("FECHA");
+                data[8] = resultado.getString("HORA");
                 tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
         } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
@@ -135,6 +137,12 @@ public class Busquedas extends javax.swing.JFrame {
         TxtId = new javax.swing.JTextField();
         BotonBuscarId = new javax.swing.JButton();
         BotonIrMenu = new javax.swing.JButton();
+        TxtFechaInicial = new javax.swing.JTextField();
+        TxtFechaFinal = new javax.swing.JTextField();
+        BotonBuscarFechas = new javax.swing.JButton();
+        LabelFechaEjemplo = new javax.swing.JLabel();
+        LabelEjemplo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -224,6 +232,24 @@ public class Busquedas extends javax.swing.JFrame {
             }
         });
 
+        BotonBuscarFechas.setText("Buscar");
+        BotonBuscarFechas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBuscarFechasActionPerformed(evt);
+            }
+        });
+
+        LabelFechaEjemplo.setText("dd/mm/aaaa");
+
+        LabelEjemplo.setText("Ejemplo:");
+
+        jButton1.setText("TABLA");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -232,41 +258,58 @@ public class Busquedas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(ScrollTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelNumeroDeParte, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelBultos, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelId))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ScrollDesviacion)
-                            .addComponent(TxtNumeroDeParte)
-                            .addComponent(TxtDescripcion)
-                            .addComponent(TxtCantidad)
-                            .addComponent(TxtBultos)
-                            .addComponent(ComboboxUsuarios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TxtId))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BotonIrMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BotonBuscarNumerodeParte, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonBuscarDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonBuscarCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonBuscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonBuscarBultos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonBuscarId, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(LabelDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelNumeroDeParte, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelBultos, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelId)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(ScrollDesviacion)
+                                    .addComponent(TxtNumeroDeParte)
+                                    .addComponent(TxtDescripcion)
+                                    .addComponent(TxtCantidad)
+                                    .addComponent(TxtBultos)
+                                    .addComponent(ComboboxUsuarios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(TxtId))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BotonIrMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(BotonBuscarNumerodeParte, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonBuscarDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonBuscarCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonBuscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonBuscarBultos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BotonBuscarId, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 8, Short.MAX_VALUE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(LabelEjemplo)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(666, 666, 666)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(LabelFechaFinal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LabelFechaInicial, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LabelFechaFinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LabelFechaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelFechaEjemplo)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TxtFechaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                                    .addComponent(TxtFechaFinal))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BotonBuscarFechas, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -306,17 +349,33 @@ public class Busquedas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(ScrollDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(BotonIrMenu)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addComponent(LabelFechaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelFechaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtFechaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelFechaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtFechaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(BotonBuscarFechas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LabelFechaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelFechaEjemplo)
+                    .addComponent(LabelEjemplo))
+                .addGap(23, 23, 23))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {LabelBultos, LabelDescripcion, LabelDesviacion, LabelFechaFinal, LabelNumeroDeParte, LabelUsuario});
@@ -511,6 +570,44 @@ this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_BotonIrMenuActionPerformed
 
+    private void BotonBuscarFechasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarFechasActionPerformed
+         String data[] = new String[9];                                                                                  //Variable que almacena los datos de la consulta
+       String fechainicial = TxtFechaInicial.getText();
+       String fechafinal = TxtFechaFinal.getText();
+        String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,USUARIO,DESVIACION,FECHA,HORA FROM Captura WHERE FECHA Between '"+fechainicial+"' and '" + fechafinal+"' ;";                  //Consulta sql de buscar datos
+        try {
+            ResultSet resultado = sentencia.executeQuery(SQL);                                                          //Linea que ejecuta la consulta sql y almacena los datos en resultado
+            tabla.setRowCount(0);
+            while (resultado.next()) {                                    //Bucle que recorre la consulta obtenida
+                data[0] = resultado.getString("ID");                      //Variable del arreglo que recibira todos los ID
+                TxtId.setText(data[0]);
+                data[1] = resultado.getString("NUMERODEPARTE");           //Variable del arreglo que recibira todos los numeros de parte
+                TxtNumeroDeParte.setText(data[1]);
+                data[2] = resultado.getString("DESCRIPCION");             //Variable del arreglo que recibira todas las descriopciones
+                TxtDescripcion.setText(data[2]);
+                data[3] = resultado.getString("CANTIDADBULTOS");          //Variable del arreglo que recibira todas las cantidades de bultos
+                TxtBultos.setText(data[3]);
+                data[4] = resultado.getString("CANTIDADTOTAL");           //Variable del arreglo que recibira todas las cantidades totales del dia
+                TxtCantidad.setText(data[4]);
+                data[5] = resultado.getString("USUARIO");
+                ComboboxUsuarios.setSelectedItem(data[5]);
+                data[6] = resultado.getString("DESVIACION");
+                TxtDesviacion.setText(data[6]);
+                data[7] = resultado.getString("FECHA");
+                data[8] = resultado.getString("");
+                tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
+            }
+        } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
+            JOptionPane.showMessageDialog(null, "Error al cargar los Datos\n");                 //Mensaje al usuario de verificacion de error
+            System.out.println(ex+"");                                                          //Imprimir la excepcion
+        }   // TODO add your handling code here:
+    }//GEN-LAST:event_BotonBuscarFechasActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+tabla.setRowCount(0);cargarDatos();
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -550,6 +647,7 @@ this.dispose();
     private javax.swing.JButton BotonBuscarBultos;
     private javax.swing.JButton BotonBuscarCantidad;
     private javax.swing.JButton BotonBuscarDescripcion;
+    private javax.swing.JButton BotonBuscarFechas;
     private javax.swing.JButton BotonBuscarId;
     private javax.swing.JButton BotonBuscarNumerodeParte;
     private javax.swing.JButton BotonBuscarUsuario;
@@ -559,6 +657,8 @@ this.dispose();
     private javax.swing.JLabel LabelCantidad;
     private javax.swing.JLabel LabelDescripcion;
     private javax.swing.JLabel LabelDesviacion;
+    private javax.swing.JLabel LabelEjemplo;
+    private javax.swing.JLabel LabelFechaEjemplo;
     private javax.swing.JLabel LabelFechaFinal;
     private javax.swing.JLabel LabelFechaInicial;
     private javax.swing.JLabel LabelId;
@@ -571,8 +671,11 @@ this.dispose();
     private javax.swing.JTextField TxtCantidad;
     private javax.swing.JTextField TxtDescripcion;
     private javax.swing.JTextArea TxtDesviacion;
+    private javax.swing.JTextField TxtFechaFinal;
+    private javax.swing.JTextField TxtFechaInicial;
     private javax.swing.JTextField TxtId;
     private javax.swing.JTextField TxtNumeroDeParte;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 
     public void setVsible(boolean b) {
