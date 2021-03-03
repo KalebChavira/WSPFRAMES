@@ -142,7 +142,7 @@ public class Busquedas extends javax.swing.JFrame {
         BotonBuscarFechas = new javax.swing.JButton();
         LabelFechaEjemplo = new javax.swing.JLabel();
         LabelEjemplo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BotonMostrarTabla = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -243,10 +243,10 @@ public class Busquedas extends javax.swing.JFrame {
 
         LabelEjemplo.setText("Ejemplo:");
 
-        jButton1.setText("TABLA");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotonMostrarTabla.setText("TABLA");
+        BotonMostrarTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotonMostrarTablaActionPerformed(evt);
             }
         });
 
@@ -269,7 +269,7 @@ public class Busquedas extends javax.swing.JFrame {
                                     .addComponent(LabelCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(LabelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(LabelId)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(BotonMostrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(ScrollDesviacion)
@@ -353,7 +353,7 @@ public class Busquedas extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LabelDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(BotonMostrarTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(ScrollDesviacion, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -372,7 +372,7 @@ public class Busquedas extends javax.swing.JFrame {
                         .addGap(1, 1, 1)
                         .addComponent(BotonBuscarFechas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelFechaEjemplo)
                     .addComponent(LabelEjemplo))
                 .addGap(23, 23, 23))
@@ -594,7 +594,7 @@ this.dispose();
                 data[6] = resultado.getString("DESVIACION");
                 TxtDesviacion.setText(data[6]);
                 data[7] = resultado.getString("FECHA");
-                data[8] = resultado.getString("");
+                data[8] = resultado.getString("HORA");
                 tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
         } catch (SQLException ex) {                                                             //Excepcion en caso de que el query no funcione
@@ -603,10 +603,10 @@ this.dispose();
         }   // TODO add your handling code here:
     }//GEN-LAST:event_BotonBuscarFechasActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotonMostrarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMostrarTablaActionPerformed
 tabla.setRowCount(0);cargarDatos();
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotonMostrarTablaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -652,6 +652,7 @@ tabla.setRowCount(0);cargarDatos();
     private javax.swing.JButton BotonBuscarNumerodeParte;
     private javax.swing.JButton BotonBuscarUsuario;
     private javax.swing.JButton BotonIrMenu;
+    private javax.swing.JButton BotonMostrarTabla;
     private javax.swing.JComboBox<String> ComboboxUsuarios;
     private javax.swing.JLabel LabelBultos;
     private javax.swing.JLabel LabelCantidad;
@@ -675,7 +676,6 @@ tabla.setRowCount(0);cargarDatos();
     private javax.swing.JTextField TxtFechaInicial;
     private javax.swing.JTextField TxtId;
     private javax.swing.JTextField TxtNumeroDeParte;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 
     public void setVsible(boolean b) {

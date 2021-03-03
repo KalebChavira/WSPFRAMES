@@ -385,7 +385,7 @@ this.dispose();
     }//GEN-LAST:event_BotonMenuActionPerformed
 
     private void BotonTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTablaActionPerformed
-       String data[] = new String[8];                                                                                  //Variable que almacena los datos de la consulta
+       String data[] = new String[9];                                                                                  //Variable que almacena los datos de la consulta
        String id = TxtID.getText();
         String SQL = "SELECT ID,NUMERODEPARTE,DESCRIPCION,CANTIDADBULTOS,CANTIDADTOTAL,HORA,FECHA,USUARIO,DESVIACION FROM Captura ORDER BY ID;";                  //Consulta sql de buscar datos
         try {
@@ -409,7 +409,7 @@ this.dispose();
                 TxtFecha.setText("");
                 data[7] = resultado.getString("USUARIO");
                 ComboBoxUsuario.setSelectedItem("");
-                data[6] = resultado.getString("DESVIACION");
+                data[8] = resultado.getString("DESVIACION");
                 TxtDesviacion.setText("");
                 tabla.addRow(data);                                       //Funcion que agrafar todos los valores del arreglo data a la tabla
             }
@@ -503,13 +503,13 @@ this.dispose();
     String desviacion =this.TxtDesviacion.getText().toString();
     
         try {
-          String SqlUpdate = "UPDATE Captura set NUMERODEPARTE='"+noparte+"', DESCRIPCION='"+descripcion+"', CANTIDADBULTOS='" + cantidadbultos+"', CANTIDADTOTAL='"+cantidadtotal+"', HORA='"+ hora+"', FECHA='" +fecha+"', USUARIO='"+clerk +"', DESVIACION='"+ desviacion + " WHERE ID= '"+ id +"'";   
+          String SqlUpdate = "UPDATE Captura set NUMERODEPARTE='"+noparte+"', DESCRIPCION='"+descripcion+"', CANTIDADBULTOS='" + cantidadbultos+"', CANTIDADTOTAL='"+cantidadtotal+"', HORA='"+ hora+"', FECHA='" +fecha+"', USUARIO='"+clerk +"', DESVIACION='"+ desviacion + "' WHERE ID= '"+ id +"'";   
           sentencia.executeUpdate(SqlUpdate);
           tabla.setRowCount(0);
             BotonTablaActionPerformed(evt);
             JOptionPane.showMessageDialog(null,"SE HA MODIFICADO EL REGISTRO NO." + id);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"no se modificaron los datos");
+            JOptionPane.showMessageDialog(null,"no se modificaron los datos del ID= "+id );
             System.out.println(""+ e);
         }
    
