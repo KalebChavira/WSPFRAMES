@@ -26,14 +26,17 @@ public class MODIFICACIONES extends javax.swing.JFrame {
      * Creates new form MODIFICACIONES
      */
     public MODIFICACIONES() {                       //Constructor de la clase
+       
         initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
         this.setLocationRelativeTo(null);                                       //Centrar el Frame
         conectarBaseDatos();                                                    //Metodo que realiza la conexion a la base de datos
         DefaultTableModel tabla = new DefaultTableModel();                      //Codigo que crea el modelo de la tabla
         cargarTitulosColumas();                                                 //Metodo iniciado para cargar titulos de las tablas en cada columna correspondiente
         cargarDatos();
+      
     }
 
+    
     Connection conexion;                                                            //Objeto llamado conexion el cual conectara la base de datos
     Statement sentencia;                                                            //Objeto sentencia el cual mandara los strings de SQL a la base de datos
     DefaultTableModel tabla = new DefaultTableModel() {
@@ -137,8 +140,8 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         DisplayHora = new rojeru_san.RSLabelHora();
         ComboBoxUsuario = new javax.swing.JComboBox<>();
         BotonBuscar = new javax.swing.JButton();
-        LabelFecha1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        LabelDesviacion = new javax.swing.JLabel();
+        ScrollTextDesviacion = new javax.swing.JScrollPane();
         TxtDesviacion = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -253,12 +256,12 @@ public class MODIFICACIONES extends javax.swing.JFrame {
             }
         });
 
-        LabelFecha1.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
-        LabelFecha1.setText("DESVIACION:");
+        LabelDesviacion.setFont(new java.awt.Font("Arial", 2, 11)); // NOI18N
+        LabelDesviacion.setText("DESVIACION:");
 
         TxtDesviacion.setColumns(20);
         TxtDesviacion.setRows(5);
-        jScrollPane1.setViewportView(TxtDesviacion);
+        ScrollTextDesviacion.setViewportView(TxtDesviacion);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -278,7 +281,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                             .addComponent(LabelCantidadTotal)
                             .addComponent(LabelFecha)
                             .addComponent(LabelHora)
-                            .addComponent(LabelFecha1))
+                            .addComponent(LabelDesviacion))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TxtID)
@@ -289,7 +292,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                             .addComponent(TxtFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                             .addComponent(TxtHora, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                             .addComponent(ComboBoxUsuario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1))
+                            .addComponent(ScrollTextDesviacion))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
@@ -350,9 +353,9 @@ public class MODIFICACIONES extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(LabelFecha1)
+                        .addComponent(LabelDesviacion)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
+                    .addComponent(ScrollTextDesviacion, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -444,6 +447,8 @@ this.dispose();
     }
     }//GEN-LAST:event_BotonCapturarActionPerformed
 
+    
+    
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
     String id = TxtID.getText();
         try {
@@ -604,13 +609,14 @@ this.dispose();
     private javax.swing.JLabel LabelCantidadBultos;
     private javax.swing.JLabel LabelCantidadTotal;
     private javax.swing.JLabel LabelDescripcion;
+    private javax.swing.JLabel LabelDesviacion;
     private javax.swing.JLabel LabelFecha;
-    private javax.swing.JLabel LabelFecha1;
     private javax.swing.JLabel LabelHora;
     private javax.swing.JLabel LabelID;
     private javax.swing.JLabel LabelNumeroSerie;
     private javax.swing.JLabel LabelUsuario;
     private javax.swing.JScrollPane ScrollDeLaTabla;
+    private javax.swing.JScrollPane ScrollTextDesviacion;
     private javax.swing.JTable TablaModelo;
     private javax.swing.JTextField TxtCantidadBultos;
     private javax.swing.JTextField TxtCantidadTotal;
@@ -620,6 +626,5 @@ this.dispose();
     private javax.swing.JTextField TxtHora;
     private javax.swing.JTextField TxtID;
     private javax.swing.JTextField TxtNumeroSerie;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
