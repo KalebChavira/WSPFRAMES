@@ -4,7 +4,7 @@ Inicio del Codigo del Menu
 package Inicio;                                               //Clase perteneciente al Paquete Menu   
 
 import Informacion.Busquedas;
-import Informacion.FRAMES;                                      //Importamos las librerias de obejetos de la clase Frames del paquete de Captura
+import Informacion.CAPTURA;                                      //Importamos las librerias de obejetos de la clase Frames del paquete de Captura
 import Inicio.LOGIN;                                         //Importamos las librerias de obejetos de la clase Login del paquete de Login
 import Informacion.MODIFICACIONES;                       //Importamos las librerias de obejetos de la clase Modificaciones del paquete de Modificaciones
 
@@ -128,7 +128,7 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonCapturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCapturaActionPerformed
-FRAMES ir = new FRAMES();                   //Instanciamos un objeto ir de la clase Frames
+CAPTURA ir = new CAPTURA();                   //Instanciamos un objeto ir de la clase Frames
 ir.setVisible(true);                        //Usamos el objeto para que nos abra la siguiente clase
 this.dispose();                             //Cerramos la clase y sus componenetes
     }//GEN-LAST:event_BotonCapturaActionPerformed

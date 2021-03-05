@@ -61,7 +61,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
         }
         try {
   conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\KCHAVIRA\\Documents\\GitHub\\Wsp-Frames\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
- //  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\FRAMES.accdb");         //Objeto que busca la Base de Datos
+ //  conexion = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Kaleb\\Documents\\GitHub\\WSPFRAMES\\BD\\CAPTURA.accdb");         //Objeto que busca la Base de Datos
  // JOptionPane.showMessageDialog(null, "Se encontro correctamente la Base de Datos");                                  //Mensaje al usuario para verificacion
         } catch (SQLException e) {                                                                                      //Excepcion en caso de que el query no funcione
          //   JOptionPane.showMessageDialog(null, "Error en la dirección de la base de datos");                           //Mensaje al usuario para verificacion
@@ -443,7 +443,7 @@ this.dispose();
             BotonTablaActionPerformed(evt);
     } catch (SQLException ex) {                                                         //Excepcion en caso de que el query no funcione
         JOptionPane.showMessageDialog(null,"NO CAPTURADO");                             //Mensaje al usuario
-        Logger.getLogger(FRAMES.class.getName()).log(Level.SEVERE, null, ex);           //Excepcion en caso de que el query no funcione
+        Logger.getLogger(CAPTURA.class.getName()).log(Level.SEVERE, null, ex);           //Excepcion en caso de que el query no funcione
     }
     }//GEN-LAST:event_BotonCapturarActionPerformed
 
