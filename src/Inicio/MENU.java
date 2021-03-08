@@ -26,7 +26,6 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotonCaptura = new javax.swing.JButton();
         BotonReportes = new javax.swing.JButton();
         BotonBusqueda = new javax.swing.JButton();
         BotonCerrarSesion = new javax.swing.JButton();
@@ -36,14 +35,6 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
         LabelTituloMenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        BotonCaptura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        BotonCaptura.setText("CAPTURA");
-        BotonCaptura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonCapturaActionPerformed(evt);
-            }
-        });
 
         BotonReportes.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonReportes.setText("REPORTES");
@@ -84,54 +75,45 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
+                .addContainerGap(90, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(LabelTituloMenu)
+                        .addGap(139, 139, 139))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BotonCaptura)
                             .addComponent(BotonReportes)
                             .addComponent(BotonBusqueda)
                             .addComponent(BotonCerrarSesion)
                             .addComponent(BotonModificaciones))
-                        .addGap(71, 71, 71))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelTituloMenu)
-                        .addGap(139, 139, 139))))
+                        .addGap(72, 72, 72))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BotonBusqueda, BotonCaptura, BotonCerrarSesion, BotonModificaciones, BotonReportes});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BotonBusqueda, BotonCerrarSesion, BotonModificaciones, BotonReportes});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(LabelTituloMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addComponent(BotonBusqueda)
-                .addGap(18, 18, 18)
-                .addComponent(BotonCaptura)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BotonReportes)
                 .addGap(18, 18, 18)
                 .addComponent(BotonModificaciones)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(BotonCerrarSesion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(DisplayFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DisplayHora, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BotonBusqueda, BotonCaptura, BotonCerrarSesion, BotonModificaciones, BotonReportes});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BotonBusqueda, BotonCerrarSesion, BotonModificaciones, BotonReportes});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotonCapturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCapturaActionPerformed
-CAPTURA ir = new CAPTURA();                   //Instanciamos un objeto ir de la clase Frames
-ir.setVisible(true);                        //Usamos el objeto para que nos abra la siguiente clase
-this.dispose();                             //Cerramos la clase y sus componenetes
-    }//GEN-LAST:event_BotonCapturaActionPerformed
 
     private void BotonCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrarSesionActionPerformed
     LOGIN ir = new LOGIN();                 //Instanciamos un objeto ir de la clase Login
@@ -188,7 +170,6 @@ this.dispose();// TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonBusqueda;
-    private javax.swing.JButton BotonCaptura;
     private javax.swing.JButton BotonCerrarSesion;
     private javax.swing.JButton BotonModificaciones;
     private javax.swing.JButton BotonReportes;
