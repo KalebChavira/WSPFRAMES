@@ -7,6 +7,8 @@ import Informacion.Busquedas;
 import Informacion.CAPTURA;                                      //Importamos las librerias de obejetos de la clase Frames del paquete de Captura
 import Inicio.LOGIN;                                         //Importamos las librerias de obejetos de la clase Login del paquete de Login
 import Informacion.MODIFICACIONES;                       //Importamos las librerias de obejetos de la clase Modificaciones del paquete de Modificaciones
+import Informacion.REPORTES;
+import Informacion.REPORTES;
 
 /**
  *
@@ -38,6 +40,11 @@ public class MENU extends javax.swing.JFrame {              //Clase publica llam
 
         BotonReportes.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonReportes.setText("REPORTES");
+        BotonReportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonReportesActionPerformed(evt);
+            }
+        });
 
         BotonBusqueda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BotonBusqueda.setText("BUSQUEDA");
@@ -128,10 +135,16 @@ this.dispose();                             //Cerramos la clase y sus componenet
     }//GEN-LAST:event_BotonModificacionesActionPerformed
 
     private void BotonBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBusquedaActionPerformed
-Busquedas ir = new Busquedas();
+Busquedas ir = new Busquedas();this.dispose();// TODO add your handling code here:
 ir.setVisible(true);
-this.dispose();// TODO add your handling code here:
+
     }//GEN-LAST:event_BotonBusquedaActionPerformed
+
+    private void BotonReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonReportesActionPerformed
+REPORTES ir = new REPORTES();
+ir.setVisible(true);// TODO add your handling code here:
+this.dispose();
+    }//GEN-LAST:event_BotonReportesActionPerformed
 
     /**
      * @param args the command line arguments
