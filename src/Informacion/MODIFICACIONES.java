@@ -45,13 +45,7 @@ public class MODIFICACIONES extends javax.swing.JFrame {
             return false;
         }
     };               //Crear la primera tabla default para poder meter datos
-    DefaultTableModel tabla2 = new DefaultTableModel() {
-        @Override
-        public boolean isCellEditable(int Fila, int Colum) {
-            return false;
-        }
-    };              //Crear la segunda tabla default para poder meter datos
-        
+
     public void conectarBaseDatos() {                                                                                   //Inicio del Metodo que conecta la aplicacion con la Base de Datos
         try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");                                                      //Linea que carga el driver

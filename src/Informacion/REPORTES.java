@@ -20,11 +20,10 @@ public class REPORTES extends MODIFICACIONES {
         conectarBaseDatos();                                                    //Metodo que realiza la conexion a la base de datos
         cargarTitulosColumas();
         cargarDatos();
-        DefaultTableModel tabla = new DefaultTableModel();                      //Codigo que crea el modelo de la tabla
+        DefaultTableModel tabla = new DefaultTableModel();         //Crear la primera tabla default para poder meter datos
     }
-
     
-     Connection conexion;                                                            //Objeto llamado conexion el cual conectara la base de datos
+   Connection conexion;                                                            //Objeto llamado conexion el cual conectara la base de datos
     Statement sentencia;                                                            //Objeto sentencia el cual mandara los strings de SQL a la base de datos
     DefaultTableModel tabla = new DefaultTableModel() {
         @Override
@@ -32,7 +31,7 @@ public class REPORTES extends MODIFICACIONES {
             return false;
         }
     };               //Crear la primera tabla default para poder meter datos
-  
+
         
     public void conectarBaseDatos() {                                                                                   //Inicio del Metodo que conecta la aplicacion con la Base de Datos
         try {
