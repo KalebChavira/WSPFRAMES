@@ -34,10 +34,21 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="rSLabelHora1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="DisplayHora" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rSLabelFecha1" min="-2" pref="103" max="-2" attributes="0"/>
+                      <Component id="DisplayFecha" min="-2" pref="103" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="LabelFecha" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="TxtFecha" min="-2" pref="174" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jButton1" min="-2" pref="230" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -62,10 +73,17 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
                       <Component id="BotonGenerarReporte" min="-2" pref="151" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TxtFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="rSLabelHora1" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="rSLabelFecha1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="DisplayHora" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="DisplayFecha" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -172,9 +190,24 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMostrarTablaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="rojeru_san.RSLabelHora" name="rSLabelHora1">
+    <Component class="rojeru_san.RSLabelHora" name="DisplayHora">
     </Component>
-    <Component class="rojeru_san.RSLabelFecha" name="rSLabelFecha1">
+    <Component class="rojeru_san.RSLabelFecha" name="DisplayFecha">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelFecha">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fecha:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtFecha">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar Fecha"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
