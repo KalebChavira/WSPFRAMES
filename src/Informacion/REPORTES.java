@@ -2,6 +2,7 @@
 
 package Informacion;
 
+import java.io.BufferedOutputStream;
 import javax.swing.JOptionPane;                                                 //libreria para pantallas emergentes
 import java.sql.Connection;                                                     //Libreria que hace la conexion a la Base de Datos
 import java.sql.DriverManager;                                                  //Libreria que carga el driver que realiza la conexion a la Base de Datos
@@ -15,6 +16,8 @@ import javax.swing.table.DefaultTableModel;                                     
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFileChooser;
@@ -226,30 +229,31 @@ public class REPORTES extends JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonGenerarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGenerarReporteActionPerformed
-if (tabla.getRowCount() > 0) {
- JFileChooser chooser = new JFileChooser();
- FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos de excel", "xls");
- chooser.setFileFilter(filter);
- chooser.setDialogTitle("Guardar archivo");
- chooser.setAcceptAllFileFilterUsed(false);
- if (chooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
- List tb = new ArrayList();
- List nom = new ArrayList();
- tb.add(tabla);
- nom.add("Compras por factura");
- String file = chooser.getSelectedFile().toString().concat(".xls");
- try {
-     var e = new Exporter(new File(file), tb, nom);
- if (e.export()) {
- JOptionPane.showMessageDialog(null, "Los datos fueron exportados a excel en el directorio seleccionado", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
- }
- } catch (Exception e) {
- JOptionPane.showMessageDialog(null, "Hubo un error " + e.getMessage(), " Error", JOptionPane.ERROR_MESSAGE);
- }
- }
- }else{
- JOptionPane.showMessageDialog(this, "No hay datos para exportar","Mensaje de error",JOptionPane.ERROR_MESSAGE);
- }    
+JFileChooser fileChooser = new JFileChooser();
+fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+int resultadoo = fileChooser.showSaveDialog(this);
+if (resultadoo == JFileChooser.CANCEL_OPTION){
+    return;
+}
+
+File archivo =fileChooser.getSelectedFile();
+        try {
+            PrintWriter salida = new PrintWriter( new FileWriter(archivo+".csv"));
+            String data[][] = obetenerInformacion();
+            for(int i=0; i<data.length;i++){
+                salida.print(data[i][0]);
+                for (int j = 1 ; j< data[i].length ; j++) {
+                   String word = data[i][j];
+                   if (word != null){
+                       salida.print("," + word);
+                   } else {
+                       salida.print(",");
+                   }
+                }
+                salida.close();
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_BotonGenerarReporteActionPerformed
 
     private void BotonMostrarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMostrarTablaActionPerformed
@@ -334,4 +338,8 @@ if (tabla.getRowCount() > 0) {
     private javax.swing.JTextField TxtFecha;
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
+
+    private String[][] obetenerInformacion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
