@@ -31,7 +31,7 @@ import jxl.Workbook;
 
 
 
-public class REPORTES extends JFrame {
+public class REPORTES extends MODIFICACIONES {
     
     public REPORTES() {                                                                //Constructor de la clase
          initComponents();                                                       //Metodo para iniciar los componentes visuales de la interfaz grafica
