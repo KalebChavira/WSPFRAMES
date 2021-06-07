@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ScrollTabla" min="-2" pref="648" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="LabelDesviacion" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                  <Component id="LabelDescripcion" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <Component id="LabelNumeroDeParte" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <Component id="LabelBultos" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="LabelCantidad" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <Component id="LabelUsuario" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="LabelId" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BotonMostrarTabla" min="-2" pref="73" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="ScrollDesviacion" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtNumeroDeParte" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtDescripcion" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtCantidad" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtBultos" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ComboboxUsuarios" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtId" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="BotonIrMenu" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="BotonBuscarNumerodeParte" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarDescripcion" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarCantidad" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarUsuario" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarBultos" min="-2" pref="73" max="-2" attributes="0"/>
+                                          <Component id="BotonBuscarId" min="-2" pref="73" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="LabelEjemplo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="666" pref="666" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="LabelFechaFinal" max="32767" attributes="0"/>
+                          <Component id="LabelFechaInicial" pref="77" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelFechaEjemplo" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="TxtFechaInicial" pref="92" max="32767" attributes="0"/>
+                                  <Component id="TxtFechaFinal" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="BotonBuscarFechas" min="-2" pref="73" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="ScrollTabla" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarId" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelNumeroDeParte" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="TxtNumeroDeParte" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarNumerodeParte" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelDescripcion" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="TxtDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelCantidad" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="TxtCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelBultos" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="TxtBultos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarBultos" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelUsuario" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="ComboboxUsuarios" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonBuscarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="LabelDesviacion" linkSize="2" min="-2" pref="24" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="BotonMostrarTabla" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="ScrollDesviacion" min="-2" pref="191" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="BotonIrMenu" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelFechaInicial" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="TxtFechaInicial" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelFechaFinal" linkSize="2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="TxtFechaFinal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Component id="BotonBuscarFechas" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LabelFechaEjemplo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelEjemplo" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="ScrollTabla">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="TablaModelo">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="8" rowCount="4">
+                <Column editable="true" title="No. de Parte" type="java.lang.Object"/>
+                <Column editable="true" title="Descripcion" type="java.lang.Object"/>
+                <Column editable="true" title="Cantidad" type="java.lang.Object"/>
+                <Column editable="true" title="Bultos" type="java.lang.Object"/>
+                <Column editable="true" title="Fecha" type="java.lang.Object"/>
+                <Column editable="true" title="Hora" type="java.lang.Object"/>
+                <Column editable="true" title="Usuario" type="java.lang.Object"/>
+                <Column editable="true" title="Desviacion" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="LabelNumeroDeParte">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No. de Parte:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelDescripcion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Descripcion:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelCantidad">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cantidad:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelBultos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bultos:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelUsuario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Usuario:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelDesviacion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Desviacion:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelFechaInicial">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fecha Inicial:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelFechaFinal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fecha Final:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtNumeroDeParte">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtDescripcion">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtCantidad">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtBultos">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="ComboboxUsuarios">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="Juan Moreno"/>
+            <StringItem index="1" value="Leopoldo Campos"/>
+            <StringItem index="2" value="Jose Batres"/>
+            <StringItem index="3" value="Manuel Hernandez"/>
+            <StringItem index="4" value="Kaleb Chavira"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="ScrollDesviacion">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="TxtDesviacion">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="BotonBuscarNumerodeParte">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarNumerodeParteActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarDescripcion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarDescripcionActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarCantidad">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarCantidadActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarBultos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarBultosActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarUsuario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarUsuarioActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelId">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ID:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtId">
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarId">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarIdActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonIrMenu">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MENU"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonIrMenuActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtFechaInicial">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtFechaFinal">
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBuscarFechas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarFechasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelFechaEjemplo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelEjemplo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ejemplo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonMostrarTabla">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TABLA"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMostrarTablaActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
